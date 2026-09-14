@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   <title>Hádanky & wow — fyzika a matematika</title>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
   <style>
     :root {
       --bg: #f6f7fb;
@@ -79,9 +89,8 @@
       padding: 13px 16px;
       border: 1px solid var(--line);
       border-radius: 12px;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       background: color-mix(in srgb, var(--card) 82%, var(--accent-soft));
-      white-space: nowrap;
+      text-align: center;
     }
     details {
       margin-top: 18px;
@@ -98,6 +107,15 @@
       user-select: none;
     }
     .solution { padding: 4px 18px 20px; }
+    .step {
+      margin: 14px 0;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: color-mix(in srgb, var(--card) 90%, var(--accent-soft));
+    }
+    .step h4 { margin: 0 0 7px; font-size: 1rem; color: var(--accent); }
+    .step p:last-child { margin-bottom: 0; }
     .wow {
       margin-top: 20px;
       padding: 14px 16px;
@@ -133,10 +151,10 @@
         <p class="lead">
           Máš gumové lano. Mravenec stojí na jednom konci a leze rychlostí <strong>1 cm/s</strong>.
           Během každé sekundy nejprve ujde 1 cm a potom se celé lano rovnoměrně prodlouží
-          o svou původní délku <strong>L</strong>.
+          o svou původní délku \(L\).
         </p>
 
-        <p>Například pro <strong>L = 10 cm</strong> má lano postupně délku 10 cm, 20 cm, 30 cm, 40 cm…</p>
+        <p>Například pro \(L=10\,\mathrm{cm}\) má lano postupně délku 10 cm, 20 cm, 30 cm, 40 cm…</p>
 
         <div class="question">Dostane se mravenec někdy na druhý konec, i když lano pořád roste?</div>
 
@@ -147,23 +165,134 @@
           <div class="solution">
             <p><strong>Ano. Dostane.</strong> Klíč je nesledovat centimetry, ale podíl celého lana, který už překonal.</p>
 
-            <p>Je-li počáteční délka lana <strong>L cm</strong>, po jednotlivých sekundách mravenec přidává k překonané části lana:</p>
+            <p>Je-li počáteční délka lana \(L\) cm, po jednotlivých sekundách mravenec přidává k překonané části lana:</p>
 
-            <div class="formula">1/L + 1/(2L) + 1/(3L) + … = (1/L) · (1 + 1/2 + 1/3 + …)</div>
+            <div class="formula">
+              \[
+                \frac{1}{L}+\frac{1}{2L}+\frac{1}{3L}+\cdots
+                =\frac{1}{L}\left(1+\frac12+\frac13+\cdots\right).
+              \]
+            </div>
 
             <p>
               Součet v závorce je <strong>harmonická řada</strong>. Roste velmi pomalu, ale bez omezení.
-              Proto pro každé konečné L existuje konečný počet sekund n, kdy
+              Proto pro každé konečné \(L\) existuje konečný počet sekund \(n\), kdy
             </p>
 
-            <div class="formula">1 + 1/2 + 1/3 + … + 1/n ≥ L.</div>
+            <div class="formula">
+              \[
+                H_n=1+\frac12+\frac13+\cdots+\frac1n \ge L.
+              \]
+            </div>
 
             <p>
               Natahování mravence nevrací zpět: když je třeba v polovině lana, rovnoměrné natažení ho nechá
               v polovině. Lano se tedy sice prodlužuje, ale zároveň mravence „veze“ dopředu.
             </p>
 
-            <div class="wow">Wow: nekonečně rostoucí délka lana sama o sobě neznamená, že konec nejde dohonit.</div>
+            <h3>Úplně krok za krokem: krátká varianta \(L=2\,\mathrm{cm}\)</h3>
+            <p>
+              Tady je celý děj až do konce. Mravenec leze rychlostí \(1\,\mathrm{cm/s}\) a po každé celé sekundě
+              se lano rovnoměrně prodlouží o další \(2\,\mathrm{cm}\).
+            </p>
+
+            <div class="step">
+              <h4>Začátek</h4>
+              <p>Lano měří \(2\,\mathrm{cm}\). Mravenec je na začátku, tedy překonal \(0\) z celého lana.</p>
+            </div>
+
+            <div class="step">
+              <h4>1. sekunda</h4>
+              <p>Mravenec ujde \(1\,\mathrm{cm}\) na laně dlouhém \(2\,\mathrm{cm}\). Překoná tedy polovinu lana:</p>
+              <div class="formula">\[\frac{1}{2}\]</div>
+              <p>
+                Potom se lano natáhne z 2 cm na 4 cm. Protože se natahuje rovnoměrně, mravenec zůstává přesně
+                v polovině. Je tedy \(2\,\mathrm{cm}\) od začátku.
+              </p>
+            </div>
+
+            <div class="step">
+              <h4>2. sekunda</h4>
+              <p>
+                Teď má lano \(4\,\mathrm{cm}\). Další 1 cm představuje čtvrtinu aktuální délky, takže k dosavadní
+                polovině přidáme \(\frac14\):
+              </p>
+              <div class="formula">
+                \[
+                  \frac12+\frac14=\frac34.
+                \]
+              </div>
+              <p>
+                Mravenec je tedy ve \(\frac34\) lana. Po natažení na \(6\,\mathrm{cm}\) zůstane ve stejném podílu,
+                takže je ve vzdálenosti
+              </p>
+              <div class="formula">
+                \[
+                  \frac34\cdot6=4{,}5\,\mathrm{cm}.
+                \]
+              </div>
+            </div>
+
+            <div class="step">
+              <h4>3. sekunda</h4>
+              <p>
+                Lano má \(6\,\mathrm{cm}\). Jeden centimetr je nyní \(\frac16\) délky lana. Celkový překonaný podíl je
+              </p>
+              <div class="formula">
+                \[
+                  \frac12+\frac14+\frac16
+                  =\frac{6}{12}+\frac{3}{12}+\frac{2}{12}
+                  =\frac{11}{12}.
+                \]
+              </div>
+              <p>
+                Po natažení na \(8\,\mathrm{cm}\) je mravenec stále v \(\frac{11}{12}\) lana, tedy ve vzdálenosti
+              </p>
+              <div class="formula">
+                \[
+                  \frac{11}{12}\cdot8=\frac{22}{3}\,\mathrm{cm}\approx7{,}33\,\mathrm{cm}.
+                \]
+              </div>
+            </div>
+
+            <div class="step">
+              <h4>4. sekunda — konec</h4>
+              <p>
+                Lano má \(8\,\mathrm{cm}\), mravenec je přibližně na \(7{,}33\,\mathrm{cm}\). Do konce mu zbývá jen
+              </p>
+              <div class="formula">
+                \[
+                  8-\frac{22}{3}=\frac23\,\mathrm{cm}.
+                \]
+              </div>
+              <p>
+                Při rychlosti \(1\,\mathrm{cm/s}\) tuto vzdálenost ujde za
+              </p>
+              <div class="formula">
+                \[
+                  t=\frac{\frac23\,\mathrm{cm}}{1\,\mathrm{cm/s}}=\frac23\,\mathrm{s}.
+                \]
+              </div>
+              <p>
+                Celkem tedy potřebuje \(3+\frac23\approx3{,}67\,\mathrm{s}\). Na konec dorazí ještě během čtvrté sekundy,
+                takže k dalšímu natažení už ani nedojde.
+              </p>
+            </div>
+
+            <p>
+              Stejný výsledek vidíme i z harmonické řady. Po třech celých sekundách je
+              \(\frac{1}{2}H_3=\frac{11}{12}<1\), ale kdyby mravenec prošel celou čtvrtou sekundu, dostali bychom
+            </p>
+            <div class="formula">
+              \[
+                \frac12 H_4
+                =\frac12\left(1+\frac12+\frac13+\frac14\right)
+                =\frac{25}{24}>1.
+              \]
+            </div>
+            <p>Proto víme, že konec musí dosáhnout právě během čtvrté sekundy.</p>
+
+            <div class="wow">Wow: i když se lano prodlužuje pořád dál, rovnoměrné natahování zároveň posouvá dopředu i mravence.</div>
 
             <h3>Různé délky</h3>
             <p>Stejná hádanka má podle počáteční délky úplně jiný časový rozměr:</p>
@@ -172,54 +301,59 @@
               <table>
                 <thead>
                   <tr>
-                    <th>Počáteční délka L</th>
-                    <th>První n s Hₙ ≥ L</th>
+                    <th>Počáteční délka \(L\)</th>
+                    <th>První celé \(n\) s \(H_n\ge L\)</th>
                     <th>Doba přibližně</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
+                    <td><strong>2 cm</strong></td>
+                    <td>4. sekunda</td>
+                    <td>3,67 s (dorazí během 4. sekundy)</td>
+                  </tr>
+                  <tr>
                     <td><strong>5 cm</strong></td>
-                    <td>83 s</td>
+                    <td>83</td>
                     <td>1 min 23 s</td>
                   </tr>
                   <tr>
                     <td><strong>10 cm</strong></td>
-                    <td>12 367 s</td>
+                    <td>12 367</td>
                     <td>3 h 26 min 7 s</td>
                   </tr>
                   <tr>
                     <td><strong>15 cm</strong></td>
-                    <td>1 835 421 s</td>
+                    <td>1 835 421</td>
                     <td>21 dní 5 h 50 min</td>
                   </tr>
                   <tr>
                     <td><strong>20 cm</strong></td>
-                    <td>272 400 600 s</td>
+                    <td>272 400 600</td>
                     <td>8,63 roku</td>
                   </tr>
                   <tr>
                     <td><strong>22 cm</strong></td>
-                    <td>2 012 783 315 s</td>
+                    <td>2 012 783 315</td>
                     <td>63,8 roku</td>
                   </tr>
                   <tr>
                     <td><strong>22,45 cm</strong></td>
-                    <td>3 156 672 600 s</td>
+                    <td>3 156 672 600</td>
                     <td>≈ 100 let</td>
                   </tr>
                   <tr>
                     <td><strong>1 km</strong></td>
-                    <td>astronomické n</td>
-                    <td>řádově 10<sup>43 422</sup> let</td>
+                    <td>astronomické \(n\)</td>
+                    <td>řádově \(10^{43\,422}\) let</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
             <p class="note">
-              Pro velká n platí Hₙ ≈ ln(n) + γ, takže počet sekund roste přibližně exponenciálně s délkou lana.
-              Proto rozdíl mezi 10 cm a 22 cm udělá z několika hodin desítky let.
+              Pro velká \(n\) platí \(H_n\approx\ln(n)+\gamma\), takže počet sekund roste přibližně exponenciálně
+              s délkou lana. Proto rozdíl mezi 10 cm a 22 cm udělá z několika hodin desítky let.
             </p>
 
             <div class="sources">
