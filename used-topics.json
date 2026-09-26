@@ -1,0 +1,18 @@
+{
+  "purpose": "Persistentní seznam již použitých nebo odeslaných hádanek, aby se neopakovaly ani tehdy, když zápis do index.html selže.",
+  "topics": [
+    "problém 100 vězňů a krabic",
+    "mravenec na natahující se gumě",
+    "Gabrielův roh",
+    "konec kloubově upevněné padající tyče může mít svislé zrychlení větší než g",
+    "Simpsonův paradox",
+    "Feynmanův obrácený postřikovač",
+    "Petrohradský paradox",
+    "dvojkužel na rozbíhajících se nakloněných kolejnicích",
+    "paradox stejně častých vlaků",
+    "dvě spojené mýdlové bubliny",
+    "Penneyho hra HHH proti THH",
+    "padající pružina Slinky",
+    "de Méréův problém: šestka a dvojšestka"
+  ]
+}
