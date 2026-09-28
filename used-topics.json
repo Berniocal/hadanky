@@ -1,6 +1,6 @@
 {
   "purpose": "Persistentní seznam již použitých nebo odeslaných hádanek, aby se neopakovaly ani tehdy, když zápis do index.html selže.",
-  "last_subject": "matematika",
+  "last_subject": "fyzika",
   "topics": [
     "problém 100 vězňů a krabic",
     "mravenec na natahující se gumě",
@@ -16,6 +16,7 @@
     "padající pružina Slinky",
     "de Méréův problém: šestka a dvojšestka",
     "cívka tažená za nit: změna směru podle úhlu tahu",
-    "problém pomíchaných klobouků: pravděpodobnost, že nikdo nedostane svůj klobouk"
+    "problém pomíchaných klobouků: pravděpodobnost, že nikdo nedostane svůj klobouk",
+    "řetízková fontána: kuličkový řetízek při vytékání vyskočí nad nádobu"
   ]
 }
