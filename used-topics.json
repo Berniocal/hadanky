@@ -1,6 +1,6 @@
 {
   "purpose": "Persistentní seznam již použitých nebo odeslaných hádanek, aby se neopakovaly ani tehdy, když zápis do index.html selže.",
-  "last_subject": "fyzika",
+  "last_subject": "matematika",
   "topics": [
     "problém 100 vězňů a krabic",
     "mravenec na natahující se gumě",
@@ -17,6 +17,7 @@
     "de Méréův problém: šestka a dvojšestka",
     "cívka tažená za nit: změna směru podle úhlu tahu",
     "problém pomíchaných klobouků: pravděpodobnost, že nikdo nedostane svůj klobouk",
-    "řetízková fontána: kuličkový řetízek při vytékání vyskočí nad nádobu"
+    "řetízková fontána: kuličkový řetízek při vytékání vyskočí nad nádobu",
+    "Conwayovi vojáci: nemožnost dosáhnout páté řady konečnou armádou"
   ]
 }
