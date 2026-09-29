@@ -1,0 +1,113 @@
+name: Doplnit chybejici hadanky
+on:
+  push:
+    paths:
+      - '.github/workflows/doplnit-chybejici-hadanky.yml'
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Doplnit karty
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+          p=Path('index.html')
+          s=p.read_text(encoding='utf-8')
+          marker='<!-- HÁDANKY:KONEC -->'
+          assert s.count(marker)==1
+          cards=[]
+          def add(slug,html):
+              if f'data-slug="{slug}"' not in s:
+                  cards.append(html.strip())
+
+          add('problem-100-veznu-a-krabic', r'''
+          <article class="card" data-slug="problem-100-veznu-a-krabic"><span class="tag">Matematika · pravděpodobnost</span><h2>🔐 Problém 100 vězňů a krabic</h2><p class="lead">Sto vězňů má čísla 1 až 100. Ve 100 krabicích jsou náhodně rozmístěna stejná čísla. Každý vězeň smí otevřít nejvýše 50 krabic a musí najít své číslo. Všichni přežijí jen tehdy, když uspějí úplně všichni.</p><div class="question">Existuje strategie, která dává skupině výrazně větší šanci než náhodné otevírání 50 krabic?</div><details><summary>Zobrazit řešení</summary><div class="solution"><p><strong>Ano.</strong> Každý začne krabicí se svým číslem. Najde-li v ní číslo \(k\), pokračuje krabicí \(k\), a tak dále. Sleduje tím cyklus náhodné permutace.</p><div class="step"><h4>Malý příklad</h4><p>Pro 8 krabic nechť obsah tvoří cykly \((1,6,3)\), \((2,5)\), \((4,8,7)\). Vězeň 1 otevře 1 → najde 6, otevře 6 → najde 3, otevře 3 → najde 1. Své číslo najde po třech otevřeních. Stejně uspějí všichni, pokud žádný cyklus není delší než polovina počtu krabic.</p></div><div class="step"><h4>Pro 100 vězňů</h4><p>Strategie uspěje právě tehdy, když náhodná permutace nemá cyklus delší než 50. Pravděpodobnost neúspěchu je</p><div class="formula">\[\sum_{k=51}^{100}\frac1k\approx0{,}6882,\]</div><p>takže úspěch má pravděpodobnost přibližně</p><div class="formula">\[1-0{,}6882\approx0{,}3118=31{,}18\,\%.\]</div></div><div class="wow">Při nezávislém náhodném výběru by společná šance byla \((1/2)^{100}\), prakticky nula. Chytrá strategie ji zvýší asi na 31 %.</div><div class="sources"><a href="https://en.wikipedia.org/wiki/100_prisoners_problem" target="_blank" rel="noopener">100 prisoners problem</a></div></div></details></article>
+          ''')
+
+          add('de-mere-sestka-a-dvojsestka', r'''
+          <article class="card" data-slug="de-mere-sestka-a-dvojsestka"><span class="tag">Matematika · pravděpodobnost</span><h2>🎲 de Méréův problém: šestka a dvojšestka</h2><p class="lead">V první hře hodíš jednou kostkou čtyřikrát a vyhraješ, pokud alespoň jednou padne šestka. Ve druhé hodíš dvěma kostkami 24krát a vyhraješ, pokud alespoň jednou padnou dvě šestky současně.</p><div class="question">Jsou obě hry stejně výhodné?</div><details><summary>Zobrazit řešení</summary><div class="solution"><p><strong>Ne.</strong> Nejjednodušší je počítat doplněk: pravděpodobnost, že požadovaný výsledek nepadne ani jednou.</p><div class="step"><h4>Jedna kostka, 4 hody</h4><div class="formula">\[P=1-\left(\frac56\right)^4=\frac{671}{1296}\approx0{,}5177.\]</div><p>Šance na výhru je asi 51,8 %.</p></div><div class="step"><h4>Dvě kostky, 24 hodů</h4><p>Dvojšestka má v jednom hodu pravděpodobnost \(1/36\), takže že nepadne, je \(35/36\):</p><div class="formula">\[P=1-\left(\frac{35}{36}\right)^{24}\approx0{,}4914.\]</div><p>Šance je jen asi 49,1 %.</p></div><div class="wow">Čtyři hody jsou přesně šestinou z 24 a dvojšestka je 36krát vzácnější než šestka, ale pravděpodobnosti se takto lineárně neškálují.</div><div class="sources"><a href="https://mathworld.wolfram.com/deMeresProblem.html" target="_blank" rel="noopener">Wolfram MathWorld — de Méré's Problem</a></div></div></details></article>
+          ''')
+
+          add('civka-tazena-za-nit', r'''
+          <article class="card" data-slug="civka-tazena-za-nit"><span class="tag">Fyzika · mechanika</span><h2>🧵 Cívka tažená za nit</h2><p class="lead">Cívka leží na stole a z jejího menšího vnitřního poloměru se odvíjí nit. Za nit táhneš pod určitým úhlem.</p><div class="question">Pojede cívka ve směru tahu, nebo se může rozjet opačně?</div><details><summary>Zobrazit řešení</summary><div class="solution"><p><strong>Směr závisí na úhlu tahu.</strong> Při valení bez prokluzu je rozhodující poloha přímky tahu vůči okamžitému bodu dotyku cívky se stolem.</p><div class="step"><h4>Mezní úhel</h4><p>Označme vnější poloměr \(R\), poloměr náboje \(r\) a úhel niti nad vodorovnou rovinou \(\theta\). Mez nastane, když přímka tahu prochází bodem dotyku se stolem. Z geometrie:</p><div class="formula">\[\cos\theta_c=\frac rR.\]</div></div><div class="step"><h4>Číselný příklad</h4><p>Pro \(R=5\,\mathrm{cm}\) a \(r=2\,\mathrm{cm}\):</p><div class="formula">\[\theta_c=\arccos\left(\frac25\right)\approx66{,}4^\circ.\]</div><p>Na jedné straně tohoto úhlu se moment síly kolem bodu dotyku obrátí oproti druhé straně; při mezním úhlu je moment tahu kolem tohoto bodu nulový.</p></div><div class="wow">Stejná cívka a stejný tah mohou po pouhé změně úhlu způsobit opačný směr valení.</div><p><strong>Do školy:</strong> stačí cívka nebo špulka s nití. Táhni nejprve téměř vodorovně a potom nit postupně zvedej.</p><div class="sources"><a href="https://physics.stackexchange.com/questions/3885/which-way-will-a-spool-move" target="_blank" rel="noopener">Diskuse fyziky cívky a mezního úhlu</a></div></div></details></article>
+          ''')
+
+          add('pomichane-klobouky', r'''
+          <article class="card" data-slug="pomichane-klobouky"><span class="tag">Matematika · kombinatorika</span><h2>🎩 Pomíchané klobouky</h2><p class="lead">Každý z \(n\) lidí odevzdá klobouk. Klobouky se náhodně promíchají a každý dostane právě jeden.</p><div class="question">Jaká je pravděpodobnost, že nikdo nedostane svůj vlastní klobouk? Klesá pro mnoho lidí skoro k nule?</div><details><summary>Zobrazit řešení</summary><div class="solution"><p>Takovým permutacím říkáme derangementy. Jejich počet je</p><div class="formula">\[!n=n!\sum_{k=0}^{n}\frac{(-1)^k}{k!}.\]</div><p>Po vydělení všemi \(n!\) možnostmi dostaneme pravděpodobnost.</p><div class="step"><h4>Konkrétně pro 5 lidí</h4><div class="formula">\[P=1-1+\frac1{2!}-\frac1{3!}+\frac1{4!}-\frac1{5!}.\]</div><div class="formula">\[P=0+0{,}5-0{,}1667+0{,}0417-0{,}0083\approx0{,}3667.\]</div><p>Tedy asi 36,7 %.</p></div><div class="step"><h4>Pro mnoho lidí</h4><div class="formula">\[P\to e^{-1}=\frac1e\approx0{,}367879.\]</div></div><div class="wow">Ani při stovkách lidí pravděpodobnost neklesne k nule. Ustálí se poblíž 36,8 %.</div><div class="sources"><a href="https://mathworld.wolfram.com/Derangement.html" target="_blank" rel="noopener">Wolfram MathWorld — Derangement</a></div></div></details></article>
+          ''')
+
+          add('retezkova-fontana', r'''
+          <article class="card" data-slug="retezkova-fontana"><span class="tag">Fyzika · dynamika</span><h2>⛓️ Řetízková fontána</h2><p class="lead">Dlouhý kuličkový řetízek leží v nádobě. Jeden konec přetáhneš přes okraj a necháš padat.</p><div class="question">Proč se za vhodných podmínek řetízek před přepadnutím přes okraj zvedne nad nádobu a vytvoří oblouk?</div><details><summary>Zobrazit řešení</summary><div class="solution"><p>Padající část táhne další články z nádoby. Nově nabírané články musí rychle získat hybnost a hromádka v nádobě může při jejich zvedání dodat dodatečnou reakci směrem vzhůru. U kuličkového řetízku souvisí efekt i s jeho lokální tuhostí a geometrií článků.</p><div class="step"><h4>Číselný příklad</h4><p>Nechť délková hustota je \(\lambda=0{,}020\,\mathrm{kg/m}\) a rychlost řetízku \(v=2{,}0\,\mathrm{m/s}\). Za \(0{,}10\,\mathrm s\) se nabere délka</p><div class="formula">\[\Delta l=v\Delta t=2{,}0\cdot0{,}10=0{,}20\,\mathrm m.\]</div><p>Její hmotnost je</p><div class="formula">\[\Delta m=\lambda\Delta l=0{,}020\cdot0{,}20=0{,}0040\,\mathrm{kg}.\]</div><p>Pro změnu hybnosti na rychlost 2 m/s je charakteristická síla</p><div class="formula">\[F=\frac{\Delta m\,v}{\Delta t}=\frac{0{,}0040\cdot2{,}0}{0{,}10}=0{,}080\,\mathrm N=\lambda v^2.\]</div></div><div class="wow">Nádoba není jen pasivní zásobník: při nabírání řetízku může hromádka působit na zvedané články vzhůru. Energie přitom pochází z poklesu gravitační potenciální energie padající části.</div><p><strong>Do školy:</strong> použij několik metrů kuličkového řetízku ve vyšší nádobě a nech žáky nejprve nakreslit očekávanou dráhu.</p><div class="sources"><a href="https://doi.org/10.1098/rspa.2013.0689" target="_blank" rel="noopener">Biggins &amp; Warner — Understanding the chain fountain</a></div></div></details></article>
+          ''')
+
+          add('conwayovi-vojaci', r'''
+          <article class="card" data-slug="conwayovi-vojaci"><span class="tag">Matematika · kombinatorika</span><h2>♟️ Conwayovi vojáci</h2><p class="lead">Na čtvercové síti jsou vojáci pod vodorovnou hranicí. Tah je jako v peg solitaire: voják přeskočí sousedního vojáka vodorovně nebo svisle na prázdné pole za ním a přeskočený voják zmizí. Diagonálně se skákat nesmí.</p><div class="question">Jak vysoko nad hranici lze dostat alespoň jednoho vojáka?</div><details><summary>Zobrazit řešení</summary><div class="solution"><p>Do 1., 2., 3. i 4. řady se dostat lze. Do 5. řady se s žádným konečným počtem vojáků dostat nelze.</p><h3>Jak vypadá tah</h3><pre style="overflow:auto;font-size:1.05rem;line-height:1.35">PŘED:  ● ● ·    →    PO:  · · ●</pre><p>První voják přeskočí sousedního, dopadne o dvě pole dál a přeskočený zmizí.</p><h3>1. řada — stačí 2 vojáci</h3><pre style="overflow:auto;line-height:1.35">1 | · · ·       1 | · ● ·
+--+------   →   --+------
+0 | · ● ·       0 | · · ·
+-1| · ● ·       -1| · · ·</pre><p>Spodní přeskočí vojáka v řadě 0 a dopadne do 1. řady.</p><h3>2. řada — stačí 4 vojáci</h3><pre style="overflow:auto;line-height:1.35">ZAČÁTEK        po 1. skoku      po 2. skoku      CÍL
+2 | · · ·       2 | · · ·       2 | · · ·       2 | · ● ·
+1 | · · ·       1 | ● · ·       1 | ● ● ·       1 | · · ·
+--+------       --+------       --+------       --+------
+0 | ● ● ·       0 | · ● ·       0 | · · ·       0 | · · ·
+-1| ● ● ·       -1| · ● ·       -1| · · ·       -1| · · ·</pre><p>Dva svislé skoky vytvoří dva vojáky vedle sebe v 1. řadě; jeden pak přeskočí druhého do 2. řady.</p><h3>3. řada — stačí 8 vojáků</h3><pre style="overflow:auto;line-height:1.35">ZAČÁTEK
+3 | · · · · ·
+2 | · · · · ·
+1 | · · · · ·
+--+----------
+0 | ● ● ● ● ●
+-1| ● ● ● · ·
+
+1) C-1 → C1
+2) E0  → C0
+3) C0  → C2
+4) A-1 → A1
+5) B-1 → B1
+6) A1  → C1
+7) C1  → C3
+
+CÍL
+3 | · · ● · ·
+2 | · · · · ·
+1 | · · · · ·
+--+----------
+0 | · · · · ·</pre><p>Každý zápis například „C−1 → C1“ znamená skok přes prostřední pole ve stejném sloupci.</p><h3>4. řada — minimum je 20 vojáků</h3><p>U čtvrté řady už je postup delší. Nejlépe je chápat ho jako stavbu „schodiště“: z vojáků pod hranicí postupně vytvoříme potřebné dvojice v řadách 1, 2 a 3 a posledním skokem dosáhneme řady 4. Následující diagram ukazuje princip vrstvení; na stránce není nutné sledovat všech 19 mezistavů najednou.</p><pre style="overflow:auto;line-height:1.35">              · ● ·              ← 4. řada (cíl)
+              · ↑ ·
+              · ● ·              ← 3. řada
+              · ● ·              ← 2. řada
+            ● ● ● ● ●            ← 1. řada
+-----------------------------
+          ● ● ● ● ● ● ●
+        ● ● ● ● ● ● ● ●
+              ...
+
+minimum na startu: 20 vojáků</pre><p class="note">Pro 4. řadu existuje konkrétní posloupnost skoků s 20 vojáky; podstatné pro paradox je, že další řada už není jen „ještě dražší“, ale je úplně nedosažitelná konečnou armádou.</p><h3>Proč 5. řada nejde</h3><p>Cílovému poli přiřadíme hodnotu 1 a políčkům ve vzdálenosti \(d\) hodnotu \(\sigma^d\), kde</p><div class="formula">\[\sigma=\frac{\sqrt5-1}{2}\approx0{,}618,\qquad \sigma+\sigma^2=1.\]</div><p>Při každém povoleném skoku se celková hodnota nezvětší. Například skok dvou kamenů z hodnot \(\sigma^2\) a \(\sigma\) na cílové pole dává</p><div class="formula">\[\sigma^2+\sigma=1.\]</div><p>Dokonce i kdyby byla zaplněna celá nekonečná polorovina pod hranicí, její celková hodnota vůči cíli v 5. řadě je 1. Každá <em>konečná</em> armáda má proto hodnotu menší než 1 a žádnými tahy ji nemůže zvýšit na hodnotu cílového pole.</p><div class="wow">Minimum pro první čtyři řady je 2, 4, 8, 20. Pro pátou řadu ale neexistuje žádné konečné minimum — nedostane se tam ani miliarda vojáků.</div><p><strong>Do školy:</strong> nakresli čtverečkovanou síť a použij mince. Nejdřív nechej žáky fyzicky vyřešit první tři řady a teprve potom prozraď, že 5. řada není otázka „kolik kamenů“, ale „nemožné“.</p><div class="sources"><a href="https://mathworld.wolfram.com/ConwaysSoldiers.html" target="_blank" rel="noopener">Wolfram MathWorld — Conway's Soldiers</a></div></div></details></article>
+          ''')
+
+          assert cards, 'Neni co doplnovat.'
+          before=len(re.findall(r'<article class="card"',s))
+          old_slugs=re.findall(r'data-slug="([^"]+)"',s)
+          insertion='\n'+'\n'.join(cards)+'\n'
+          out=s.replace(marker,insertion+marker)
+          assert out.count(marker)==1
+          assert 'MathJax' in out and '/* MOBILE-FRIENDLY v1 */' in out
+          assert out.rstrip().endswith('</html>')
+          assert len(re.findall(r'<article class="card"',out))==before+len(cards)
+          for x in old_slugs: assert out.count(f'data-slug="{x}"')==1
+          for html in cards:
+              slug=re.search(r'data-slug="([^"]+)"',html).group(1)
+              assert out.count(f'data-slug="{slug}"')==1
+          p.write_text(out,encoding='utf-8')
+          Path('.github/workflows/doplnit-chybejici-hadanky.yml').unlink()
+      - name: Commitnout vysledek
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html .github/workflows/doplnit-chybejici-hadanky.yml
+          git commit -m "hadanka: doplnit vsechny chybejici karty"
+          git push origin main
