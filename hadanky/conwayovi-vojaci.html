@@ -1,0 +1,25 @@
+<article class="card" data-slug="conwayovi-vojaci"><span class="tag">Matematika · kombinatorika</span><h2>♟️ Conwayovi vojáci</h2><p class="lead">Voják smí přeskočit sousedního vojáka vodorovně nebo svisle na prázdné pole hned za ním. Přeskočený voják zmizí. Diagonálně se neskáče.</p><div class="question">Jak vysoko nad výchozí hranici lze dostat alespoň jednoho vojáka?</div><details><summary>Zobrazit řešení</summary><div class="solution"><h3>Pravidlo jednoho tahu</h3><pre>PŘED:  ● ● ·    →    PO:  · · ●</pre><h3>1. řada — 2 vojáci</h3><pre>1 | · ● ·
+--+------
+0 | · · ·
+-1| · · ·</pre><p>Stačí dva vojáci pod sebou: spodní přeskočí horního a dopadne do 1. řady.</p><h3>2. řada — 4 vojáci</h3><p>Ze čtyř vojáků vytvoříme dvěma svislými skoky dva vojáky vedle sebe v 1. řadě. Jeden přeskočí druhého vodorovně tak, aby vznikla dvojice nad sebou, a následný svislý skok dosáhne 2. řady.</p><h3>3. řada — 8 vojáků</h3><pre>ZAČÁTEK
+3 | · · · · ·
+2 | · · · · ·
+1 | · · · · ·
+--+----------
+0 | ● ● ● ● ●
+-1| ● ● ● · ·
+
+1) C-1 → C1
+2) E0  → C0
+3) C0  → C2
+4) A-1 → A1
+5) B-1 → B1
+6) A1  → C1
+7) C1  → C3
+
+CÍL
+3 | · · ● · ·
+2 | · · · · ·
+1 | · · · · ·
+--+----------
+0 | · · · · ·</pre><h3>4. řada — minimum 20 vojáků</h3><p>Čtvrtá řada je ještě dosažitelná, ale minimální výchozí armáda už má 20 vojáků. Tahy opakovaně vytvářejí dvojice potřebné pro další skok výš; poslední dvojice v řadách 2 a 3 umožní skok do řady 4.</p><div class="wow">Minima jsou 2, 4, 8 a 20. Do 5. řady se však nedostane žádná konečná armáda.</div><h3>Proč 5. řada nejde</h3><p>Polím přiřadíme váhy \(\sigma^d\), kde \(\sigma=(\sqrt5-1)/2\) a \(\sigma+\sigma^2=1\). Při povoleném skoku se součet vah nezvětší. Každá konečná armáda pod hranicí má vzhledem k cíli v 5. řadě celkovou váhu menší než 1, zatímco samotné cílové pole má váhu 1.</p><div class="sources"><a href="https://mathworld.wolfram.com/ConwaysSoldiers.html" target="_blank" rel="noopener">Wolfram MathWorld — Conway's Soldiers</a></div></div></details></article>
