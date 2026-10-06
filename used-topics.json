@@ -1,6 +1,6 @@
 {
   "purpose": "Persistentní seznam již použitých nebo odeslaných hádanek, aby se neopakovaly ani tehdy, když zápis do index.html selže.",
-  "last_subject": "matematika",
+  "last_subject": "fyzika",
   "topics": [
     "problém 100 vězňů a krabic",
     "mravenec na natahující se gumě",
@@ -24,6 +24,7 @@
     "Pythagorův pohár: překročení hladiny spustí sifon a vyprázdní nádobu",
     "netranzitivní kostky: A poráží B, B poráží C a C poráží A",
     "setrvačnost zavěšeného závaží: pomalý tah přetrhne horní vlákno, rychlé trhnutí dolní",
-    "Josephův problém: přeživší při vyřazování každého druhého v kruhu"
+    "Josephův problém: přeživší při vyřazování každého druhého v kruhu",
+    "rattleback: asymetrické těleso při roztočení v jednom směru přejde do kývání a obrátí směr rotace"
   ]
 }
