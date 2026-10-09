@@ -1,0 +1,14 @@
+<article class="card" data-slug="von-neumannova-metoda-neferova-mince">
+<span class="tag">Matematika · pravděpodobnost</span>
+<h2>🪙 Spravedlivý los z nespravedlivé mince</h2>
+<p class="lead">Máš minci, u níž padá panna častěji než orel. Nevíš ale, jak moc je nevyvážená. Jednotlivé hody jsou nezávislé a pravděpodobnost panny se nemění.</p>
+<div class="question">Dokážeš z takové mince získat přesně spravedlivé rozhodnutí mezi dvěma možnostmi?</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p><strong>Ano.</strong> Házej dvakrát: kombinace panna–orel znamená možnost A, orel–panna možnost B. Dvě stejné strany (panna–panna nebo orel–orel) ignoruj a zkus to znovu.</p>
+<div class="step"><h4>1. Označíme pravděpodobnost</h4><p>Nechť pravděpodobnost panny je \(p\) a orla \(1-p\). Při nezávislých hodech mají obě použitelné kombinace stejnou pravděpodobnost:</p><div class="formula">\[P(PO)=p(1-p),\qquad P(OP)=(1-p)p.\]</div></div>
+<div class="step"><h4>2. Dosadíme konkrétní příklad</h4><p>Předpokládejme, že panna padá s pravděpodobností \(p=0{,}8\). Pak</p><div class="formula">\[P(PO)=0{,}8\cdot0{,}2=0{,}16,\]</div><div class="formula">\[P(OP)=0{,}2\cdot0{,}8=0{,}16.\]</div><p>Pravděpodobnost použitelné dvojice je \(0{,}32\). Mezi použitelnými dvojicemi proto připadá na každou možnost přesně polovina:</p><div class="formula">\[P(A\mid PO\text{ nebo }OP)=\frac{0{,}16}{0{,}32}=\frac12.\]</div></div>
+<div class="step"><h4>3. Kolik hodů čekáme?</h4><p>Průměrně potřebujeme \(1/0{,}32=3{,}125\) dvojice, tedy \(6{,}25\) hodu na jedno spravedlivé rozhodnutí. To je střední hodnota, nikoli pevný počet.</p></div>
+<div class="wow">Nemusíme znát hodnotu \(p\)! Stačí, aby se během pokusu neměnila a aby hody byly nezávislé. Pro \(p=0\) nebo \(p=1\) ovšem metoda nikdy neskončí.</div>
+<p><strong>Do školy:</strong> simulujte v tabulce minci s pravděpodobností panny 80 %. Dvojice PP a OO škrtáme, PO a OP počítáme. Jejich četnosti se budou při mnoha pokusech vyrovnávat.</p>
+<div class="sources">Zdroj: <a href="https://en.wikipedia.org/wiki/Fair_coin#Fair_results_from_a_biased_coin" target="_blank" rel="noopener">Fair results from a biased coin – von Neumannův postup</a></div>
+</div></details></article>
