@@ -1,0 +1,14 @@
+<article class="card" data-slug="bertranduv-paradox-tri-krabicky">
+<span class="tag">Matematika · podmíněná pravděpodobnost</span>
+<h2>🪙 Bertrandův paradox tří krabiček</h2>
+<p class="lead">Máme tři krabičky. V první jsou dvě zlaté mince, ve druhé dvě stříbrné a ve třetí jedna zlatá a jedna stříbrná. Náhodně vybereme krabičku a z ní náhodně vytáhneme minci. Je zlatá.</p>
+<div class="question">Jaká je pravděpodobnost, že i druhá mince ve stejné krabičce je zlatá?</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p>Odpověď je <strong>2/3</strong>, nikoli 1/2. Po spatření zlaté mince nejsou dvě možné krabičky stejně pravděpodobné: krabička se dvěma zlatými mincemi má dvakrát tolik způsobů, jak z ní zlatou minci vytáhnout.</p>
+<div class="step"><h4>1. Vypíšeme stejně pravděpodobné možnosti</h4><p>Označme jednotlivé mince: ZZ obsahuje Z₁ a Z₂, ZS obsahuje Z₃ a S₃, SS obsahuje S₁ a S₂. Při rovnoměrném výběru krabičky a poté jedné ze dvou mincí má každá z šesti označených mincí pravděpodobnost \(1/6\).</p></div>
+<div class="step"><h4>2. Podmíníme výběr zlatou mincí</h4><p>Zlatou minci jsme mohli vytáhnout právě třemi stejně pravděpodobnými způsoby: Z₁, Z₂ nebo Z₃. V prvních dvou případech je druhá mince zlatá, ve třetím stříbrná.</p><div class="formula">\[P(\text{druhá zlatá}\mid\text{první zlatá})=\frac{2}{3}\approx66{,}7\,\%.\]</div></div>
+<div class="step"><h4>3. Ověření Bayesovým pravidlem</h4><p>Pravděpodobnost vybrat ZZ je \(1/3\) a pak určitě vytáhneme zlatou. Celková pravděpodobnost zlaté mince je \((1+0+1/2)/3=1/2\).</p><div class="formula">\[P(ZZ\mid Z)=\frac{(1)(1/3)}{1/2}=\frac23.\]</div></div>
+<div class="wow">Znalost barvy první mince mění pravděpodobnost, kterou přisuzujeme původně vybrané krabičce. Dvě zbývající krabičky nejsou stejně pravděpodobné.</div>
+<p><strong>Do školy:</strong> připravte tři neprůhledné sáčky se dvěma barevnými žetony. Opakujte pokus a zapisujte pouze případy, kdy první žeton je zlatý. Podíl případů se dvěma zlatými se bude blížit 2/3.</p>
+<div class="sources">Zdroj: <a href="https://en.wikipedia.org/wiki/Bertrand%27s_box_paradox" target="_blank" rel="noopener">Bertrand's box paradox – popis a odvození</a></div>
+</div></details></article>
