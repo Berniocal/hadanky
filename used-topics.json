@@ -1,6 +1,6 @@
 {
   "purpose": "Persistentní seznam již použitých nebo odeslaných hádanek, aby se neopakovaly ani tehdy, když zápis do index.html selže.",
-  "last_subject": "fyzika",
+  "last_subject": "matematika",
   "topics": [
     "problém 100 vězňů a krabic",
     "mravenec na natahující se gumě",
@@ -32,6 +32,7 @@
     "náhodné rozlomení tyčky ve dvou nezávisle rovnoměrně zvolených bodech: trojúhelník vznikne s pravděpodobností 1/4",
     "vířivé proudy: neodymový magnet zpomalený při průchodu měděnou trubkou",
     "ztracená palubní vstupenka: poslední cestující získá své sedadlo s pravděpodobností 1/2",
-    "heliový balónek v rovnoměrně zrychlujícím autě: vztlak jej vychýlí dopředu"
+    "heliový balónek v rovnoměrně zrychlujícím autě: vztlak jej vychýlí dopředu",
+    "narozeninový paradox: ve skupině 23 lidí je pravděpodobnost shody narozenin přes 50 procent"
   ]
 }
