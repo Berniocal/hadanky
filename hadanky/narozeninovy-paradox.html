@@ -1,0 +1,17 @@
+<article class="card" data-slug="narozeninovy-paradox">
+<span class="tag">Matematika · pravděpodobnost</span>
+<h2>🎂 Narozeninový paradox</h2>
+<p class="lead">Ve třídě je 23 žáků. Předpokládej, že narozeniny jednotlivých žáků jsou nezávislé a všech 365 dní roku je stejně pravděpodobných.</p>
+<div class="question">Jaká je pravděpodobnost, že alespoň dva žáci mají narozeniny ve stejný den a měsíc?</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p>Už při 23 lidech je pravděpodobnost shody <strong>přibližně 50,73 %</strong>. Počítáme doplňkovou pravděpodobnost: nejprve zjistíme, jaká je šance, že všichni mají různá data narození.</p>
+<div class="step"><h4>1. Postupně vylučujeme obsazené dny</h4><p>První člověk může mít narozeniny v libovolném dni: \(365/365\). Druhý se musí vyhnout jednomu dni: \(364/365\). Třetí dvěma: \(363/365\). U 23. člověka zbývá \(343\) dosud nepoužitých dní.</p></div>
+<div class="step"><h4>2. Vynásobíme podmíněné pravděpodobnosti</h4><div class="formula">\[P(\text{všechna data různá})=\frac{365}{365}\cdot\frac{364}{365}\cdots\frac{343}{365}\approx0{,}492703.\]</div><p>Tedy přibližně 49,27 % případů nemá žádnou shodu.</p></div>
+<div class="step"><h4>3. Vypočítáme pravděpodobnost shody</h4><div class="formula">\[P(\text{alespoň jedna shoda})=1-0{,}492703=0{,}507297\approx50{,}73\,\%.\]</div><p>Pravděpodobnost alespoň jedné shody je větší než jedna polovina.</p></div>
+<div class="step"><h4>4. Proč to není totéž jako shoda s jedním konkrétním žákem?</h4><p>Ve skupině 23 lidí existuje \(23\cdot22/2=253\) různých dvojic. Šance, že někdo z ostatních 22 lidí má narozeniny právě ve stejný den jako předem vybraný žák, je ale jen</p><div class="formula">\[1-\left(\frac{364}{365}\right)^{22}\approx5{,}86\,\%.\]</div><p>Tyto dvě otázky jsou zásadně odlišné.</p></div>
+<div class="wow">Pouhých 23 lidí stačí k více než 50% pravděpodobnosti alespoň jedné shody narozenin, protože porovnáváme všechny dvojice, nikoli jen jednoho člověka s ostatními.</div>
+<p><strong>Varianty:</strong> při 22 lidech je pravděpodobnost přibližně 47,57 %, při 30 lidech 70,63 % a při 57 lidech více než 99 %. Pro pokročilé: odvoďte obecný vztah \(P(n)=1-\prod_{k=0}^{n-1}(365-k)/365\) pro \(n\le365\).</p>
+<p><strong>Do školy:</strong> nechte žáky odhadnout odpověď a pak na počítači simulujte tisíckrát skupinu 23 náhodných narozenin. Porovnejte podíl skupin s alespoň jednou shodou s teoretickými 50,73 %.</p>
+<div class="sources">Zdroj: <a href="https://mathworld.wolfram.com/BirthdayProblem.html" target="_blank" rel="noopener">Wolfram MathWorld – Birthday Problem</a></div>
+</div></details>
+</article>
