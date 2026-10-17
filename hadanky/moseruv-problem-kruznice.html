@@ -1,0 +1,16 @@
+<article class="card" data-slug="moseruv-problem-kruznice">
+<span class="tag">Matematika · kombinatorika a geometrie</span>
+<h2>🔵 Záhada šesti bodů</h2>
+<p class="lead">Na kružnici vyznačíme několik různých bodů a každé dva spojíme úsečkou. Body volíme tak, aby se žádné tři tětivy neprotínaly v jednom vnitřním bodě. Pro 1, 2, 3, 4 a 5 bodů dostaneme postupně 1, 2, 4, 8 a 16 oblastí.</p>
+<div class="question">Kolik oblastí vznikne pro šest bodů? Pokračuje zdvojnásobování?</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p><strong>Vznikne nejvýše 31 oblastí, nikoli 32.</strong> Jde o Moserův problém dělení kruhu tětivami. Podmínka, že žádné tři tětivy nemají společný vnitřní průsečík, je zásadní.</p>
+<div class="step"><h4>1. Počet tětiv</h4><p>Každou tětivu určují dva z \(n\) bodů. Proto \(T=\binom n2\). Každá nová tětiva vytvoří alespoň jednu další oblast.</p></div>
+<div class="step"><h4>2. Počet průsečíků</h4><p>Každé čtyři body na kružnici tvoří konvexní čtyřúhelník, jehož dvě úhlopříčky se uvnitř protínají. Při našem předpokladu jsou tyto průsečíky navzájem různé, takže \(P=\binom n4\). Každý vnitřní průsečík přidá při postupném kreslení tětiv ještě jednu oblast.</p><div class="formula">\[R(n)=1+\binom n2+\binom n4.\]</div></div>
+<div class="step"><h4>3. Úplný číselný příklad: šest bodů</h4><p>Počet tětiv: \(\binom62=\frac{6\cdot5}{2}=15\).</p><p>Počet vnitřních průsečíků: \(\binom64=\frac{6\cdot5\cdot4\cdot3}{4\cdot3\cdot2\cdot1}=15\).</p><p>Počet oblastí:</p><div class="formula">\[R(6)=1+15+15=\boxed{31}.\]</div><p>Člen 1 je původní kruh, 15 nových oblastí přidají samotné tětivy a dalších 15 jejich vnitřní průsečíky.</p></div>
+<div class="wow">Posloupnost 1, 2, 4, 8, 16 svádí k výsledku 32. Jenže šest bodů dá nejvýše 31 oblastí: několik prvních členů posloupnosti ještě nedokazuje pravidlo!</div>
+<p><strong>Varianta – sedm bodů:</strong> \(R(7)=1+\binom72+\binom74=1+21+35=\boxed{57}\), nikoli 64.</p>
+<p><strong>Pozor na pravidelný šestiúhelník:</strong> Jeho tři hlavní úhlopříčky se protínají ve středu, takže podmínka různých průsečíků neplatí a vznikne pouze <strong>30</strong> oblastí. Pro maximum 31 rozmísti body nepravidelně.</p>
+<p><strong>Školní demonstrace:</strong> Nakreslete kružnici se šesti nepravidelně rozmístěnými body, spojte všech 15 dvojic a očíslujte oblasti. Potom pokus opakujte s pravidelným šestiúhelníkem a vysvětlete rozdíl 31 versus 30. Žáci mohou počet ověřit na papíře nebo v GeoGebře.</p>
+<div class="sources">Zdroje: <a href="https://proofwiki.org/wiki/Moser%27s_Circle_Problem" target="_blank" rel="noopener">ProofWiki – Moser's Circle Problem</a>; <a href="https://mathcontest.unm.edu/PastContests/2004-2005/2004-2005_Solutions2.pdf" target="_blank" rel="noopener">University of New Mexico – soutěžní řešení</a>.</div>
+</div></details></article>
