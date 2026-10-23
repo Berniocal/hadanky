@@ -1,6 +1,6 @@
 {
   "purpose": "Persistentní seznam již použitých nebo odeslaných hádanek, aby se neopakovaly ani tehdy, když zápis do index.html selže.",
-  "last_subject": "fyzika",
+  "last_subject": "matematika",
   "topics": [
     "problém 100 vězňů a krabic",
     "mravenec na natahující se gumě",
@@ -40,6 +40,7 @@
     "hydrostatický paradox: stejná výška hladiny a plocha dna dávají stejnou tlakovou sílu nezávisle na tvaru nádoby",
     "kámen z loďky: po vhození potápějícího se kamene do vody hladina klesne",
     "tepelná roztažnost otvoru: otvor v rovnoměrně zahřátém plechu se zvětší",
-    "nadsvětelný pohyb světelné skvrny bez nadsvětelného přenosu informace"
+    "nadsvětelný pohyb světelné skvrny bez nadsvětelného přenosu informace",
+    "paradox přátelství: při počítání průměrného počtu přátel přes všechna přátelství jsou více propojení lidé zastoupeni častěji"
   ]
 }
