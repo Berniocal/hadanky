@@ -1,0 +1,28 @@
+<article class="card" data-slug="nahodne-rozlomeni-tycky">
+<span class="tag">Matematika · geometrická pravděpodobnost</span>
+<h2>📏 Tyčka rozlomená na tři díly</h2>
+<p class="lead">Na tyčce náhodně a nezávisle vybereme dva body, každý se stejnou pravděpodobností kdekoliv po celé délce tyčky. V obou bodech ji rozřízneme, takže vzniknou tři části.</p>
+<div class="question">Jaká je pravděpodobnost, že ze tří částí dokážeme sestavit trojúhelník?</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p><strong>Pravděpodobnost je pouze \(\frac14=25\,\%\).</strong> Podstatné je, že vybíráme <em>dva nezávislé rovnoměrné body na původní tyčce</em>. Jiný způsob náhodného lámání může dát jinou odpověď.</p>
+<div class="step"><h4>1. Kdy lze ze tří úseček složit trojúhelník?</h4>
+<p>Označme délky dílů \(a,b,c\) a původní délku tyčky \(L=a+b+c\). Aby vznikl nedegenerovaný trojúhelník, musí být každá strana kratší než součet ostatních dvou. Protože jejich součet je \(L\), stačí a je nutné, aby:</p>
+<div class="formula">\[\boxed{a<\frac L2,\quad b<\frac L2,\quad c<\frac L2.}\]</div>
+<p>Jediný díl délky alespoň \(L/2\) by zabránil uzavření trojúhelníku.</p></div>
+<div class="step"><h4>2. Jak vyjádřit náhodné řezy?</h4>
+<p>Pro přehlednost zvolme \(L=1\). Polohy řezů jsou dvě nezávislá náhodná čísla \(X,Y\) z intervalu \([0,1]\). Předpokládejme nejprve \(X<Y\). Vzniknou délky \(X\), \(Y-X\) a \(1-Y\). Podmínky pro trojúhelník tedy jsou:</p>
+<div class="formula">\[X<\frac12,\qquad Y-X<\frac12,\qquad Y>\frac12.\]</div>
+<p>V souřadnicovém čtverci všech dvojic \((X,Y)\) jde o trojúhelníkovou oblast s vrcholy \((0,\frac12)\), \((\frac12,\frac12)\) a \((\frac12,1)\). Její obsah je \(\frac12\cdot\frac12\cdot\frac12=\frac18\). Pro případ \(Y<X\) existuje stejně velká zrcadlová oblast. Celková příznivá plocha je \(\frac18+\frac18=\frac14\) z jednotkového čtverce.</p>
+<div class="formula">\[\boxed{P(\text{trojúhelník})=\frac14=25\,\%.}\]</div></div>
+<div class="step"><h4>3. Úplný číselný příklad</h4>
+<p>Tyčka má délku \(L=100\,\mathrm{cm}\). Řezy vyjdou ve vzdálenostech \(30\,\mathrm{cm}\) a \(70\,\mathrm{cm}\) od levého konce.</p>
+<p>Jednotlivé díly: \(a=30\,\mathrm{cm}\), \(b=70-30=40\,\mathrm{cm}\), \(c=100-70=30\,\mathrm{cm}\).</p>
+<p>Ověření trojúhelníkové nerovnosti: \(30+30>40\), \(30+40>30\), \(40+30>30\). Všechny tři díly jsou také kratší než \(L/2=50\,\mathrm{cm}\), takže trojúhelník <strong>lze sestavit</strong>.</p>
+<p>Pokud místo toho řezy vyjdou na \(10\,\mathrm{cm}\) a \(40\,\mathrm{cm}\), vzniknou díly \(10\), \(30\) a \(60\,\mathrm{cm}\). Protože \(10+30<60\), trojúhelník <strong>nevznikne</strong>.</p></div>
+<div class="wow">Přestože tyčku rozřízneme na tři části, ve třech čtvrtinách všech dvojic náhodných řezů z nich trojúhelník nesložíme!</div>
+<h3>Varianta</h3>
+<p>Záleží na tom, co znamená „náhodně rozlomit“. Pokud nejprve provedeme jeden řez a potom náhodně vybereme jeden z obou dílů k dalšímu řezu, nejde o stejný pravděpodobnostní model. Výsledek \(\frac14\) platí právě pro dva nezávisle a rovnoměrně vybrané body na původní tyčce.</p>
+<h3>Školní demonstrace</h3>
+<p>Rozdej proužky papíru délky 20 cm. Pro každý proužek vygenerujte dvě nezávislá náhodná čísla od 0 do 20 cm, označte místa řezů a rozstřihněte. Žáci zkusí složit trojúhelník a výsledky celé třídy sečtou. Pro větší počet pokusů lze místo stříhání rovnou počítat délky tří dílů. Přibližně čtvrtina pokusů by měla vyjít.</p>
+<div class="sources">Zdroje: <a href="https://mathworld.wolfram.com/LinePointPicking.html" target="_blank" rel="noopener">Wolfram MathWorld – Line Point Picking</a>; <a href="https://arxiv.org/abs/1805.06512" target="_blank" rel="noopener">The Broken Stick Project – MIT PRIMES / CrowdMath</a>.</div>
+</div></details></article>
