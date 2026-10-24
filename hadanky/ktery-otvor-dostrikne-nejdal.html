@@ -1,0 +1,45 @@
+<article class="card" data-slug="ktery-otvor-dostrikne-nejdal">
+<span class="tag">Fyzika · proudění kapalin a kinematika</span>
+<h2>💦 Který otvor dostříkne nejdál?</h2>
+<p class="lead">Ve vysoké otevřené nádobě je voda. Ve svislé stěně jsou tři stejné malé otvory: nahoře, uprostřed a dole. Voda z nich vytéká vodorovně. Hladinu udržujeme ve stálé výšce a proudy dopadají na vodorovnou podložku v úrovni dna nádoby.</p>
+<div class="question">Ze kterého otvoru dostříkne voda nejdál? Z nejnižšího, kde je největší tlak, nebo z jiného?</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p><strong>Nejdál dostříkne otvor v polovině výšky mezi hladinou a podložkou.</strong> Dolní otvor dává rychlejší proud, ale voda letí kratší dobu. Horní otvor má delší dobu letu, ale menší výtokovou rychlost. Uprostřed se oba vlivy nejlépe vyváží.</p>
+<div class="step"><h4>1. Jak rychle voda vytéká?</h4>
+<p>Označme <strong>H</strong> výšku hladiny nad podložkou a <strong>y</strong> výšku otvoru nad podložkou. Hloubka otvoru pod hladinou je tedy \(H-y\). Pro velkou nádobu, malý otvor a zanedbatelné ztráty dává Torricelliho zákon vodorovnou výtokovou rychlost:</p>
+<div class="formula">\[v=\sqrt{2g(H-y)}.\]</div>
+<p>Čím níže je otvor pod hladinou, tím větší je výtoková rychlost.</p></div>
+<div class="step"><h4>2. Jak dlouho voda letí?</h4>
+<p>Po opuštění otvoru se kapky pohybují jako při vodorovném vrhu: počáteční svislá rychlost je nulová. Z výšky \(y\) klesnou na podložku za dobu určenou vztahem \(y=\frac12gt^2\), tedy:</p>
+<div class="formula">\[t=\sqrt{\frac{2y}{g}}.\]</div>
+<p>Čím výše je otvor nad podložkou, tím déle voda letí.</p></div>
+<div class="step"><h4>3. Která výška dává největší dostřik?</h4>
+<p>Vodorovný dostřik je součin výtokové rychlosti a doby letu:</p>
+<div class="formula">\[R=vt=\sqrt{2g(H-y)}\sqrt{\frac{2y}{g}}=\boxed{2\sqrt{y(H-y)}}.\]</div>
+<p>Součin \(y(H-y)\) je největší, když jsou oba činitelé stejné, tedy při \(y=H/2\). Můžeme to ověřit také úpravou:</p>
+<div class="formula">\[y(H-y)=\frac{H^2}{4}-\left(y-\frac H2\right)^2\leq\frac{H^2}{4}.\]</div>
+<p>Proto <strong>největší dostřik</strong> vychází pro otvor přesně v polovině výšky a má hodnotu \(R_{\max}=H\).</p></div>
+<div class="step"><h4>4. Úplný číselný příklad</h4>
+<p>Hladina je \(H=1{,}00\,\mathrm m\) nad podložkou. Porovnáme otvory ve výškách \(y=0{,}20\,\mathrm m\), \(0{,}50\,\mathrm m\) a \(0{,}80\,\mathrm m\). Uvažujme \(g=9{,}81\,\mathrm{m/s^2}\).</p>
+<p><strong>Prostřední otvor:</strong> Jeho hloubka pod hladinou je \(H-y=1{,}00-0{,}50=0{,}50\,\mathrm m\).</p>
+<div class="formula">\[v=\sqrt{2\cdot9{,}81\cdot0{,}50}\approx3{,}13\,\mathrm{m/s}.\]</div>
+<p>Voda padá z výšky \(0{,}50\,\mathrm m\), takže:</p>
+<div class="formula">\[t=\sqrt{\frac{2\cdot0{,}50}{9{,}81}}\approx0{,}319\,\mathrm s.\]</div>
+<p>Vodorovná vzdálenost dopadu:</p>
+<div class="formula">\[R=vt\approx3{,}13\cdot0{,}319\approx\boxed{1{,}00\,\mathrm m}.\]</div>
+<p><strong>Ostatní otvory:</strong> Stejnými vztahy dostaneme:</p>
+<div class="table-wrap"><table><thead><tr><th>Výška otvoru \(y\)</th><th>Výtoková rychlost</th><th>Doba letu</th><th>Dostřik \(R\)</th></tr></thead><tbody>
+<tr><td>\(0{,}20\,\mathrm m\)</td><td>\(3{,}96\,\mathrm{m/s}\)</td><td>\(0{,}202\,\mathrm s\)</td><td><strong>\(0{,}80\,\mathrm m\)</strong></td></tr>
+<tr><td>\(0{,}50\,\mathrm m\)</td><td>\(3{,}13\,\mathrm{m/s}\)</td><td>\(0{,}319\,\mathrm s\)</td><td><strong>\(1{,}00\,\mathrm m\)</strong></td></tr>
+<tr><td>\(0{,}80\,\mathrm m\)</td><td>\(1{,}98\,\mathrm{m/s}\)</td><td>\(0{,}404\,\mathrm s\)</td><td><strong>\(0{,}80\,\mathrm m\)</strong></td></tr>
+</tbody></table></div>
+<p>Nejnižší otvor vystřikuje vodu nejrychleji, ale <strong>prostřední dostříkne nejdál</strong>.</p></div>
+<div class="wow">Nejnižší otvor má největší výtokovou rychlost, ale ne největší dostřik. V ideálním modelu je nejvýhodnější otvor v polovině výšky a dva otvory souměrné vůči této polovině dostříknou stejně daleko.</div>
+<h3>Varianty a hranice modelu</h3>
+<p><strong>Souměrné otvory:</strong> Výšky \(y\) a \(H-y\) mají stejný dostřik, protože ve vztahu \(R=2\sqrt{y(H-y)}\) se oba činitelé jen prohodí.</p>
+<p><strong>Jiné tíhové zrychlení:</strong> V ideálním modelu se \(g\) ve vzorci pro dostřik vykrátí: menší výtoková rychlost je kompenzována delší dobou letu.</p>
+<p><strong>Skutečná nádoba:</strong> Tření, tvar otvorů, odpor vzduchu a pokles hladiny mohou výsledky pozměnit. Předpověď přesně platí pro ustálené ideální proudění z malé dírky, zanedbatelnou rychlost hladiny a dopad do společné vodorovné roviny.</p>
+<h3>Školní demonstrace</h3>
+<p>Do vysoké plastové lahve nebo průhledné nádoby připrav tři malé stejné otvory, například 6, 15 a 24 cm nad dnem. Při hladině 30 cm nad dnem ideální model předpovídá dostřiky přibližně <strong>24 cm, 30 cm a 24 cm</strong>. Nádobu postav do vaničky tak, aby proudy dopadaly přibližně do roviny jejího dna. Otvory nejprve přelep, naplň nádobu a pak je současně odkryj. Pro co nejpřesnější porovnání udržuj hladinu blízko vyznačené výšky a natáčej z boku.</p>
+<div class="sources"><strong>Ověřené zdroje:</strong> <a href="https://lecdem.physics.umd.edu/f/f4/1765-f4-63.html" target="_blank" rel="noopener">University of Maryland – Mariotte's Bottle (experiment s nejdelším dostřikem prostředního otvoru)</a>; <a href="https://openstax.org/books/college-physics/pages/12-3-the-most-general-applications-of-bernoullis-equation" target="_blank" rel="noopener">OpenStax – Torricelli's Theorem</a>; <a href="https://physics.montana.edu/demonstrations/video/2_fluidmechanics/demos/toricellistank.html" target="_blank" rel="noopener">Montana State University – Torricelli's Tank</a>.</div>
+</div></details></article>
