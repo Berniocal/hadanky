@@ -1,6 +1,6 @@
 {
   "purpose": "Persistentní seznam již použitých nebo odeslaných hádanek, aby se neopakovaly ani tehdy, když zápis do index.html selže.",
-  "last_subject": "fyzika",
+  "last_subject": "matematika",
   "topics": [
     "problém 100 vězňů a krabic",
     "mravenec na natahující se gumě",
@@ -42,6 +42,7 @@
     "tepelná roztažnost otvoru: otvor v rovnoměrně zahřátém plechu se zvětší",
     "nadsvětelný pohyb světelné skvrny bez nadsvětelného přenosu informace",
     "paradox přátelství: při počítání průměrného počtu přátel přes všechna přátelství jsou více propojení lidé zastoupeni častěji",
-    "vodorovný dostřik vody z otvorů nádoby: při stálé hladině a dopadu v úrovni dna má největší dosah otvor v polovině výšky vodního sloupce"
+    "vodorovný dostřik vody z otvorů nádoby: při stálé hladině a dopadu v úrovni dna má největší dosah otvor v polovině výšky vodního sloupce",
+    "šachovnice bez dvou protilehlých rohů: 31 domin 1×2 nemůže pokrýt zbývajících 62 políček kvůli nerovnosti počtu barev"
   ]
 }
