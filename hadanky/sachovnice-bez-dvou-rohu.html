@@ -1,0 +1,31 @@
+<article class="card" data-slug="sachovnice-bez-dvou-rohu">
+<span class="tag">Matematika · kombinatorika a logika</span>
+<h2>♟️ 31 domin a dvě chybějící políčka</h2>
+<p class="lead">Z běžné šachovnice \(8\times8\) odstraníme dvě políčka v protilehlých rozích. Zůstane 62 políček. Máme 31 stejných domin o velikosti \(1\times2\) políčka; každé lze položit vodorovně nebo svisle, ale nesmí přesahovat ani překrývat jiné.</p>
+<div class="question">Dokážeme zbývajících 62 políček přesně pokrýt všemi 31 dominy, bez jediné mezery?</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p><strong>Ne. Přestože plocha přesně souhlasí, žádné takové pokrytí neexistuje.</strong> Rozhoduje šachovnicové obarvení a jednoduchá neměnná vlastnost každého domina.</p>
+<div class="step"><h4>1. Dvě barvy</h4>
+<p>Celá šachovnice má 32 černých a 32 bílých políček. Protilehlé rohy mají stejnou barvu: například při číslování řádků a sloupců od 1 jsou rohy \((1,1)\) a \((8,8)\); oba mají sudý součet souřadnic.</p>
+<p>Odebereme-li dva černé rohy, zbude \(32-2=30\) černých a \(32\) bílých políček. Při opačném obarvení se jen prohodí názvy barev.</p>
+</div>
+<div class="step"><h4>2. Co musí zakrýt jedno domino?</h4>
+<p>Každé domino pokrývá dvě sousední políčka. Ta mají vždy opačné barvy. Jedno domino tedy zakryje <strong>právě jedno černé a jedno bílé políčko</strong>, ať je otočeno jakkoli.</p>
+<div class="formula">\[n\text{ domin}\ \Rightarrow\ n\text{ černých}+n\text{ bílých políček}.\]</div>
+</div>
+<div class="step"><h4>3. Úplný číselný příklad: šachovnice 8 × 8</h4>
+<p><strong>Počet políček:</strong> \(8\cdot8=64\). Po odstranění rohů: \(64-2=62\).</p>
+<p><strong>Potřebný počet domin podle plochy:</strong> \(62/2=31\).</p>
+<p><strong>Počet políček podle barev:</strong> černá \(32-2=30\), bílá \(32\).</p>
+<p><strong>Požadavek 31 domin:</strong> každé pokrývá jedno políčko každé barvy, takže by muselo být k dispozici 31 černých a 31 bílých políček.</p>
+<div class="formula">\[\underbrace{30}_{\text{černá}}\ne\underbrace{31}_{\text{nutno}}\qquad\text{a}\qquad\underbrace{32}_{\text{bílá}}\ne\underbrace{31}_{\text{nutno}}.\]</div>
+<p><strong>Výsledek:</strong> 31 domin nelze položit. Po nejvýše 30 dominech zbývají alespoň dvě bílá políčka, která už jediné domino nezakryje.</p>
+</div>
+<div class="wow">Plocha vychází dokonale: \(31\cdot2=62\). Přesto je úloha nemožná. Jeden pohled na barvy dokáže víc než stovky pokusů s pokládáním domin!</div>
+<h3>Varianty</h3>
+<p><strong>Menší šachovnice 6 × 6:</strong> původně 18 políček každé barvy. Po odstranění protilehlých rohů zbude 16 políček jedné a 18 druhé barvy. Sedmnáct domin by vyžadovalo 17 od každé, proto ani zde pokrytí neexistuje.</p>
+<p><strong>Odstraníme dvě sousední políčka:</strong> třeba první dvě políčka v horní řadě. Zbylých šest políček horní řady pokryjí tři domina a zbývajících sedm úplných řad po osmi políčkách dalších \(7\cdot4=28\) domin. Celkem \(3+28=31\) — tentokrát to jde.</p>
+<h3>Školní demonstrace</h3>
+<p>Vytiskněte šachovnici 8 × 8, odstřihněte dva protilehlé rohy a vystřihněte 31 papírových obdélníků 1 × 2. Nechte žáky několik minut zkoušet pokrytí; potom je vyzvěte, aby místo dalšího přesouvání dílků hledali vlastnost, kterou každé domino zachovává. Pro rychlejší pokus stačí šachovnice 6 × 6 se 17 dominy.</p>
+<div class="sources">Zdroje: <a href="https://www.cl.cam.ac.uk/~lp15/papers/Deduction/lecture4.pdf" target="_blank" rel="noopener">University of Cambridge – The Mutilated Chess Board (L. C. Paulson)</a>; <a href="https://www.andrew.cmu.edu/user/avigad/Talks/london.pdf" target="_blank" rel="noopener">Carnegie Mellon University – Automated Reasoning for the Working Mathematician (J. Avigad)</a>.</div>
+</div></details></article>
