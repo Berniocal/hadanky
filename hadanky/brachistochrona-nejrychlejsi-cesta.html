@@ -1,0 +1,31 @@
+<article class="card" data-slug="brachistochrona-nejrychlejsi-cesta">
+<span class="tag">Fyzika · mechanika, energie a optimalizace</span>
+<h2>🎢 Nejrychlejší cesta není nejkratší</h2>
+<p class="lead">Dvě malé kuličky vypustíme současně z klidu ze stejného bodu. Obě mají dorazit do stejného níže položeného cíle. Jedna klouže po přímé nakloněné dráze, druhá po delší prohnuté dráze, která na začátku prudce klesá. Uvažujme ideální bodové kuličky bez tření a odporu vzduchu.</p>
+<div class="question">Která kulička dorazí do cíle dříve: ta po kratší přímce, nebo ta po delší zakřivené dráze?</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p><strong>Vhodně zakřivená dráha může být rychlejší než přímka.</strong> Nejrychlejší dráhou mezi dvěma body v homogenním tíhovém poli je při ideálním klouzání <strong>brachistochrona</strong>, část obrácené cykloidy. Kulička na ní nejprve rychle získá rychlost prudkým klesáním a pak díky tomu většinu cesty urazí rychleji. Ne každá libovolná prohnutá dráha je rychlejší; záleží na jejím tvaru.</p>
+<div class="step"><h4>1. Proč nestačí nejkratší vzdálenost?</h4>
+<p>Čas je součtem malých časových úseků: \(\mathrm dt=\mathrm ds/v\). Rychlost tělesa puštěného z klidu v hloubce \(y\) pod startem určuje zachování mechanické energie:</p>
+<div class="formula">\[mgy=\frac12 mv^2 \quad\Rightarrow\quad v=\sqrt{2gy}.\]</div>
+<p>Čím dříve těleso klesne hlouběji, tím dříve se pohybuje vysokou rychlostí. Delší dráha tak může trvat kratší dobu.</p></div>
+<div class="step"><h4>2. Úplný číselný příklad: stejné body, dvě dráhy</h4>
+<p>Start označme \((0,0)\), svislá souřadnice \(y\) roste dolů. Cíl je o \(H=1{,}00\,\mathrm m\) níže a vodorovně o \(X=\pi/2\,\mathrm m\approx1{,}571\,\mathrm m\) dál. Uvažujme \(g=9{,}81\,\mathrm{m/s^2}\).</p>
+<p><strong>Přímá dráha:</strong> délka podle Pythagorovy věty:</p>
+<div class="formula">\[L=\sqrt{X^2+H^2}=\sqrt{(\pi/2)^2+1^2}\approx1{,}862\,\mathrm m.\]</div>
+<p>Zrychlení podél přímé nakloněné dráhy je konstantní, \(a_{\parallel}=g\sin\alpha=gH/L\). Z rovnice \(L=\frac12 a_{\parallel}t^2\) dostaneme:</p>
+<div class="formula">\[t_{\mathrm{přímka}}=\sqrt{\frac{2L}{a_{\parallel}}}=\sqrt{\frac{2L^2}{gH}}=\sqrt{\frac{2\cdot(1{,}862)^2}{9{,}81\cdot1}}\approx\boxed{0{,}841\,\mathrm s}.\]</div>
+<p><strong>Cykloida:</strong> Pro tuto dvojici bodů zvolíme poloměr vytvářející kružnice \(r=0{,}50\,\mathrm m\) a parametr \(\theta\) od \(0\) do \(\pi\):</p>
+<div class="formula">\[x=r(\theta-\sin\theta),\qquad y=r(1-\cos\theta).\]</div>
+<p>Pro \(\theta=\pi\) skutečně vyjde \(x=\pi r=\pi/2\,\mathrm m\) a \(y=2r=1\,\mathrm m\). Element dráhy je \(\mathrm ds/\mathrm d\theta=2r\sin(\theta/2)\), rychlost z energie \(v=2\sqrt{gr}\sin(\theta/2)\), takže \(\mathrm dt/\mathrm d\theta=\sqrt{r/g}\). Integrací od 0 do \(\pi\):</p>
+<div class="formula">\[t_{\mathrm{cykloida}}=\pi\sqrt{\frac rg}=\pi\sqrt{\frac{0{,}50}{9{,}81}}\approx\boxed{0{,}709\,\mathrm s}.\]</div>
+<p><strong>Porovnání:</strong> Cykloida má délku \(4r=2{,}00\,\mathrm m\), tedy je delší než přímka o přibližně 14 cm. Přesto je čas kratší o \(0{,}841-0{,}709\approx0{,}132\,\mathrm s\), tedy asi o <strong>15,6 %</strong> vzhledem k času na přímce.</p>
+</div>
+<div class="wow">Kulička na delší dvoumetrové dráze dorazí přibližně za 0,71 s, zatímco na kratší 1,86metrové přímce až za 0,84 s. Nejkratší cesta nemusí být nejrychlejší!</div>
+<h3>Varianty a důležité předpoklady</h3>
+<p><strong>Stejná rychlost v cíli:</strong> Obě ideální kuličky ztratí stejnou polohovou energii, a proto mají v cíli shodnou rychlost \(v=\sqrt{2gH}=\sqrt{19{,}62}\approx4{,}43\,\mathrm{m/s}\). Liší se průběh rychlosti a doba jízdy.</p>
+<p><strong>Jiný tvar:</strong> Libovolná prohnutá dráha rychlejší být nemusí. Pro dané dva body je ideálním časovým minimem cykloida. Při skutečném valení kuliček se část energie mění v rotační kinetickou energii; uvedené časy platí pro bodové těleso klouzající bez tření, nikoli přímo pro reálné valící se kuličky.</p>
+<h3>Školní demonstrace</h3>
+<p>Připrav dvě souběžné dráhy se společným začátkem a koncem: přímou nakloněnou a cykloidní. Současně vypusť dvě stejné skleněné či kovové kuličky a natoč dojezd zpomaleným videem. Při valení budou absolutní časy jiné než v ideálním výpočtu, ale na vhodně vytvořených drahách zakřivená dráha zvítězí. Pokud nemáš cykloidní dráhu, lze porovnat i rovnou a prohnutou dráhu podle demonstrace University of Maryland; ta však ukazuje příbuzný, nikoli totožný experiment.</p>
+<div class="sources">Odborné zdroje: <a href="https://www.homepages.ucl.ac.uk/~ucahmto/latex_html/pandoc_chapter2.html" target="_blank" rel="noopener">University College London – The Brachistochrone (teorie)</a>; <a href="https://sciencedemonstrations.fas.harvard.edu/presentations/brachistochrone" target="_blank" rel="noopener">Harvard University – Brachistochrone (školní experiment)</a>; <a href="https://lecdem.physics.umd.edu/tools-and-resources/lecdem-blog/374-blog-demo-highlight-the-racing-balls.html" target="_blank" rel="noopener">University of Maryland – The Racing Balls (příbuzná demonstrace)</a>.</div>
+</div></details></article>
