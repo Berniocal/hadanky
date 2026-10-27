@@ -1,0 +1,35 @@
+<article class="card" data-slug="monty-hall-tri-dvere">
+<span class="tag">Matematika · pravděpodobnost a podmíněná informace</span>
+<h2>🚪 Tři dveře: vyplatí se změnit volbu?</h2>
+<p class="lead">V soutěži stojíš před třemi zavřenými dveřmi. Za jedněmi je výhra, za dvěma není nic. Vybereš si jedny dveře, ale zatím je neotevřeš. Moderátor ví, kde je výhra, a vždy otevře jedny z ostatních dveří, za nimiž nic není. Pak ti nabídne možnost přejít k jediným dalším zavřeným dveřím. Pokud může otevřít dvoje nevýherní dveře, vybere jedny náhodně. Výhra byla na začátku umístěna za každé dveře se stejnou pravděpodobností.</p>
+<div class="question">Je lepší původní volbu ponechat, změnit ji, nebo je to jedno?</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p><strong>Vyplatí se změnit volbu.</strong> Při ponechání prvních dveří je šance na výhru \\(1/3\\), při změně \\(2/3\\). Moderátor neotvírá dveře náhodně bez znalosti obsahu: záměrně odhalí nevýherní dveře a nabídku změny dá vždy.</p>
+<div class="step"><h4>1. Jaká byla šance při prvním výběru?</h4>
+<p>Ze tří stejně pravděpodobných dveří jsou právě jedny výherní. Proto platí:</p>
+<div class="formula">\\[P(\\text{první volba správná})=\\frac13,\\qquad P(\\text{první volba chybná})=\\frac23.\\]</div>
+<p>Moderátor ti původní dveře neotevře. Jestliže ses napoprvé trefil, změnou prohraješ. Jestliže ses netrefil, moderátor musí odhalit druhé nevýherní dveře a změnou vyhraješ.</p></div>
+<div class="step"><h4>2. Všechny tři možnosti</h4>
+<p>Pro přehlednost si představ, že vždy nejprve zvolíš dveře A. Výhra může být stejně pravděpodobně za A, B nebo C:</p>
+<div class="table-wrap"><table><thead><tr><th>Výhra je za</th><th>Moderátor otevře</th><th>Zůstat u A</th><th>Změnit volbu</th></tr></thead><tbody>
+<tr><td>A</td><td>B nebo C (prázdné)</td><td>Výhra</td><td>Prohra</td></tr>
+<tr><td>B</td><td>C (prázdné)</td><td>Prohra</td><td>Výhra</td></tr>
+<tr><td>C</td><td>B (prázdné)</td><td>Prohra</td><td>Výhra</td></tr>
+</tbody></table></div>
+<p>Změna tedy vyhrává ve dvou ze tří stejně pravděpodobných případů:</p>
+<div class="formula">\\[\\boxed{P(\\text{výhra při změně})=\\frac23\\approx66{,}7\\,\\%},\\qquad P(\\text{výhra bez změny})=\\frac13\\approx33{,}3\\,\\%.\\]</div></div>
+<div class="step"><h4>3. Úplný číselný příklad: 300 her</h4>
+<p>Předpokládejme 300 nezávislých her podle uvedených pravidel. Při strategii „vždy zůstat“ je pravděpodobnost výhry \\(p=1/3\\). Očekávaný počet výher získáme vztahem \\(E=np\\), protože v každé hře je stejná šance na úspěch:</p>
+<div class="formula">\\[E_{\\text{zůstat}}=300\\cdot\\frac13=\\boxed{100\\text{ výher}}.\\]</div>
+<p>Při strategii „vždy změnit“ je pravděpodobnost \\(p=2/3\\), a proto:</p>
+<div class="formula">\\[E_{\\text{změnit}}=300\\cdot\\frac23=\\boxed{200\\text{ výher}}.\\]</div>
+<p>Změna volby tedy v průměru přinese o \\(200-100=100\\) výher více. Jde o <strong>očekávané</strong> počty, nikoli zaručený výsledek přesně 300 náhodných pokusů.</p></div>
+<div class="wow">Ačkoli po otevření jedněch dveří zůstanou dvoje zavřené, šance nejsou 50 : 50. Moderátor věděl, které dveře může bezpečně otevřít. Změna volby zdvojnásobí pravděpodobnost výhry.</div>
+<h3>Varianty a předpoklady</h3>
+<p><strong>Sto dveří:</strong> Vybereš jedny ze 100 dveří. Moderátor, který zná výhru, otevře 98 nevýherních dveří a ponechá zavřené pouze tvoje a ještě jedny. Při ponechání vyhraješ s pravděpodobností \\(1/100=1\\,\\%\\), při změně s pravděpodobností \\(99/100=99\\,\\%\\).</p>
+<p><strong>Pozor na změnu pravidel:</strong> Výsledek \\(2/3\\) platí jen tehdy, když moderátor ví, kde je výhra, vždy otevře jiné nevýherní dveře a vždy nabídne změnu. Pokud otevírá dveře náhodně nebo nabízí změnu jen někdy, mohou být pravděpodobnosti jiné.</p>
+<h3>Školní demonstrace</h3>
+<p>Vezmi tři neprůhledné kelímky a jeden žeton. Učitel schová žeton, žák zvolí kelímek a učitel, který zná polohu žetonu, odkryje jiný prázdný kelímek. Žák si vybere, zda zůstane, nebo změní volbu. Výsledky zaznamenávejte do tabulky. Lze také pro každé rozestavení rovnou vyhodnotit obě strategie: když první volba trefila žeton, vyhrává „zůstat“; jinak vyhrává „změnit“. Po 30 a více pokusech porovnejte podíly s teoretickými \\(1/3\\) a \\(2/3\\).</p>
+<div class="sources">Ověřené zdroje: <a href="https://math.hmc.edu/funfacts/monty-hall-problem/" target="_blank" rel="noopener">Harvey Mudd College – Monty Hall Problem</a>; <a href="https://www.probability.ca/jeff/writing/montysimple.html" target="_blank" rel="noopener">Jeffrey S. Rosenthal – A Simple Solution to the Monty Hall Problem</a>; <a href="https://www.scientificamerican.com/article/the-3-door-monty-hall-problem/" target="_blank" rel="noopener">Scientific American – The 3-Door Monty Hall Problem</a>.</div>
+</div></details>
+</article>
