@@ -1,0 +1,34 @@
+<article class="card" data-slug="ciselna-cerna-dira-6174">
+<span class="tag">Matematika · číselné hry, dělitelnost a algoritmy</span>
+<h2>🔢 Číselná černá díra</h2>
+<p class="lead">Vyber si libovolné čtyřciferné číslo, jehož číslice nejsou všechny stejné. Z jeho číslic sestav největší a nejmenší možné čtyřciferné uspořádání, menší odečti od většího a se získaným výsledkem postup opakuj. Pokud výsledek začíná nulou, nulu při dalším kroku zachovej, například 999 zapisuj jako 0999.</p>
+<div class="question">Můžeš výběrem počátečního čísla ovlivnit, kde tento postup skončí? Nebo se různá čísla nakonec překvapivě setkají?</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p><strong>Každé přípustné čtyřciferné výchozí číslo dospěje nejvýše po sedmi odečteních k číslu 6174.</strong> Tomuto číslu se říká <strong>Kaprekarova konstanta</strong>. Je to pevný bod postupu: po dalším kroku zůstává stejné.</p>
+<div class="step"><h4>1. Úplný číselný příklad: začneme číslem 3524</h4>
+<p>Nejprve seřadíme číslice sestupně, abychom dostali největší číslo 5432, a vzestupně, abychom dostali nejmenší číslo 2345. Jejich rozdíl určí další člen posloupnosti:</p>
+<div class="formula">\[5432-2345=\boxed{3087}.\]</div>
+<p>Stejný postup zopakujeme s číslicemi 3, 0, 8, 7. Nula musí zůstat jednou ze čtyř číslic, proto nejmenší uspořádání zapisujeme jako 0378:</p>
+<div class="formula">\[8730-0378=\boxed{8352}.\]</div>
+<p>Ve třetím kroku seřadíme číslice 8, 3, 5, 2 a opět odečteme:</p>
+<div class="formula">\[8532-2358=\boxed{6174}.\]</div>
+<p>Význam: od čísla 3524 jsme se po třech odečteních dostali k 6174. A při dalším opakování:</p>
+<div class="formula">\[7641-1467=\boxed{6174}.\]</div>
+<p>Odtud už se nikam neposuneme.</p></div>
+<div class="step"><h4>2. Proč to není náhoda?</h4>
+<p>Označme seřazené číslice \(a\ge b\ge c\ge d\). Největší číslo má hodnotu \(1000a+100b+10c+d\), nejmenší \(1000d+100c+10b+a\). Jejich rozdíl je:</p>
+<div class="formula">\[\begin{aligned}D&=(1000a+100b+10c+d)\\&\quad-(1000d+100c+10b+a)\\&=\boxed{999(a-d)+90(b-c)}.\end{aligned}\]</div>
+<p>Oba koeficienty 999 a 90 jsou násobky devíti, proto <strong>každý výsledek prvního i dalších odečtení je dělitelný devíti</strong>. To samo o sobě ještě nedokazuje, že skončíme na 6174, ale ukazuje důležitou pravidelnost.</p>
+<p>Úplné ověření lze provést konečným rozborem všech 8991 čtyřciferných počátečních čísel s alespoň dvěma různými číslicemi. Každé z nich dojde k 6174 nejvýše v sedmi krocích. Tuto vlastnost popisují matematické zdroje Wolfram MathWorld a Plus Magazine.</p></div>
+<div class="step"><h4>3. Někdy je potřeba opravdu sedm kroků</h4>
+<p>Například od čísla 2005 dostaneme:</p>
+<div class="formula">\[\begin{aligned}5200-0025&=5175\\7551-1557&=5994\\9954-4599&=5355\\5553-3555&=1998\\9981-1899&=8082\\8820-0288&=8532\\8532-2358&=\boxed{6174}.\end{aligned}\]</div>
+<p>Jde o sedm odečtení. To potvrzuje, že horní hranice sedmi kroků je skutečně dosažitelná.</p></div>
+<div class="wow">Vyber téměř libovolné čtyřciferné číslo, proveď stále stejnou jednoduchou operaci a vždy skončíš na 6174. Jako by čísla padala do stejné „číselné černé díry“!</div>
+<h3>Varianty a důležité podmínky</h3>
+<p><strong>Čtyři stejné číslice:</strong> Například \(7777-7777=0000\), takže toto číslo je výjimkou. <strong>Nuly:</strong> Vždy pracujeme se čtyřmi pozicemi; z výsledku 999 uděláme pro další krok 0999. Bez této podmínky tvrzení obecně neplatí. <strong>Tři číslice:</strong> Při stejném pravidle s třemi pozicemi je analogickým pevným bodem číslo 495, protože \(954-459=495\).</p>
+<h3>Školní demonstrace</h3>
+<p>Na začátku hodiny napiš číslo 6174 na papírek a otoč ho lícem dolů. Žáci si nezávisle zvolí různá čtyřciferná čísla s alespoň dvěma různými číslicemi a opakují přerovnání a odečítání. Po nejvýše sedmi kolech odkryj předpověď. Nech třídu vyzkoušet i výjimku 1111 a číslo obsahující nulu, například 1000. V navazující aktivitě mohou žáci napsat krátký program, který prověří všech 8991 přípustných čtyřciferných čísel.</p>
+<div class="sources">Ověřené zdroje: <a href="https://mathworld.wolfram.com/KaprekarsConstant.html" target="_blank" rel="noopener">Wolfram MathWorld – Kaprekar's Constant</a>; <a href="https://plus.maths.org/mysterious-number-6174" target="_blank" rel="noopener">Plus Magazine – Mysterious number 6174 (Yutaka Nishiyama)</a>; <a href="https://www.youtube.com/watch?v=d8TRcZklX_Q" target="_blank" rel="noopener">Numberphile – 6174 (názorné video)</a>.</div>
+</div></details>
+</article>
