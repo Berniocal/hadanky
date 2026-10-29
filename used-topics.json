@@ -1,6 +1,6 @@
 {
   "purpose": "Persistentní seznam již použitých nebo odeslaných hádanek, aby se neopakovaly ani tehdy, když zápis do index.html selže.",
-  "last_subject": "fyzika",
+  "last_subject": "matematika",
   "topics": [
     "problém 100 vězňů a krabic",
     "mravenec na natahující se gumě",
@@ -46,6 +46,7 @@
     "šachovnice bez dvou protilehlých rohů: 31 domin 1×2 nemůže pokrýt zbývajících 62 políček kvůli nerovnosti počtu barev",
     "brachistochrona: cykloida je rychlejší než přímá nakloněná dráha mezi stejnými body při pohybu bez tření",
     "Monty Hallův problém: při třech dveřích a moderátorově odhalení nevýherních dveří zvýší změna volby šanci na výhru z 1/3 na 2/3",
-    "papírový kelímek s vodou nad plamenem: voda se může vařit, aniž se papír v kontaktu s vodou vznítí, protože voda odvádí teplo"
+    "papírový kelímek s vodou nad plamenem: voda se může vařit, aniž se papír v kontaktu s vodou vznítí, protože voda odvádí teplo",
+    "Kaprekarova konstanta 6174: opakované odečítání nejmenšího a největšího čtyřciferného uspořádání číslic vede nejvýše za sedm kroků k 6174 (se zachováním úvodních nul)"
   ]
 }
