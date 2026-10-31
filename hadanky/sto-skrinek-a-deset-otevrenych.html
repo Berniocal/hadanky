@@ -1,0 +1,36 @@
+<article class="card" data-slug="sto-skrinek-a-deset-otevrenych">
+<span class="tag">Matematika · dělitelé, sudá a lichá čísla, druhé mocniny</span>
+<h2>🔐 Sto skříněk a deset otevřených</h2>
+<p class="lead">Na školní chodbě stojí 100 zavřených skříněk očíslovaných od 1 do 100. První žák změní stav všech skříněk (otevře je). Druhý změní stav každé druhé (2, 4, 6, …). Třetí změní stav každé třetí (3, 6, 9, …). Obdobně žák číslo \(k\) změní stav všech skříněk s číslem dělitelným \(k\). Poslední, stý žák změní stav jen skříňky číslo 100. Změnit stav znamená otevřenou zavřít a zavřenou otevřít.</p>
+<div class="question">Kolik skříněk zůstane po průchodu všech 100 žáků otevřených? Dokážeš určit jejich čísla, aniž bys simuloval všech 100 průchodů?</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p><strong>Otevřených zůstane přesně deset skříněk: 1, 4, 9, 16, 25, 36, 49, 64, 81 a 100.</strong> Jsou to právě úplné druhé mocniny.</p>
+<div class="step"><h4>1. Co rozhoduje o stavu skříňky?</h4>
+<p>Skříňka číslo \(n\) se přepne při průchodu žáka číslo \(k\) právě tehdy, když \(k\) dělí \(n\) beze zbytku. Počet přepnutí se tedy rovná počtu kladných dělitelů čísla \(n\). Skříňka byla na začátku zavřená: po lichém počtu přepnutí je otevřená, po sudém zavřená.</p></div>
+<div class="step"><h4>2. Úplný číselný příklad: skříňky 36 a 30</h4>
+<p>Pro skříňku <strong>36</strong> vypíšeme všechny kladné dělitele, protože právě tito žáci ji přepnou:</p>
+<div class="formula">\[36:\quad 1,\ 2,\ 3,\ 4,\ 6,\ 9,\ 12,\ 18,\ 36.\]</div>
+<p>Je jich devět. Skříňka tedy změní stav devětkrát. Protože \(9=2\cdot4+1\) je liché, po osmi změnách je opět zavřená a devátá ji otevře. <strong>Skříňka 36 zůstane otevřená.</strong></p>
+<p>Pro srovnání skříňku <strong>30</strong> přepnou žáci s čísly:</p>
+<div class="formula">\[30:\quad 1,\ 2,\ 3,\ 5,\ 6,\ 10,\ 15,\ 30.\]</div>
+<p>Je jich osm. Protože \(8=2\cdot4\) je sudé, každé otevření se vyruší s některým zavřením. <strong>Skříňka 30 zůstane zavřená.</strong></p></div>
+<div class="step"><h4>3. Proč právě druhé mocniny?</h4>
+<p>Dělitele libovolného čísla \(n\) lze seskupovat do dvojic \(d\) a \(n/d\). Například u čísla 30 jsou dvojice \(1\cdot30\), \(2\cdot15\), \(3\cdot10\), \(5\cdot6\): celkem osm různých dělitelů.</p>
+<p>U čísla 36 vznikají dvojice \(1\cdot36\), \(2\cdot18\), \(3\cdot12\), \(4\cdot9\), ale také \(6\cdot6\). Dělitel 6 zde patří sám k sobě, proto se počítá jen jednou. Výsledkem je \(2\cdot4+1=9\) dělitelů.</p>
+<p>Takový „osamělý“ dělitel existuje právě tehdy, když \(d=n/d\), tedy \(d^2=n\). To nastává <strong>právě u úplných čtverců</strong>. Jen jejich počet dělitelů je lichý.</p></div>
+<div class="step"><h4>4. Kolik skříněk zůstane otevřených?</h4>
+<p>Hledáme všechny druhé mocniny nejvýše 100:</p>
+<div class="formula">\[1^2,\ 2^2,\ 3^2,\ \ldots,\ 10^2=100.\]</div>
+<p>Pro obecný počet \(N\) skříněk a stejný počet průchodů platí:</p>
+<div class="formula">\[N_{\mathrm{otevřených}}=\left\lfloor\sqrt{N}\right\rfloor.\]</div>
+<p>Symbol \(\lfloor x\rfloor\) znamená největší celé číslo nepřevyšující \(x\). Dosadíme \(N=100\):</p>
+<div class="formula">\[N_{\mathrm{otevřených}}=\left\lfloor\sqrt{100}\right\rfloor=\boxed{10}.\]</div>
+<p><strong>Význam:</strong> Ze sta původně zavřených skříněk zůstane otevřená pouze každá s číslem, které je druhou mocninou celého čísla.</p></div>
+<div class="wow">Sto žáků přepíná skříňky podle sta různých pravidel. Přesto lze konečný stav všech skříněk předpovědět bez jediného přepnutí: otevřené zůstanou jen skříňky s čísly úplných čtverců!</div>
+<h3>Varianty</h3>
+<p><strong>20 skříněk a 20 žáků:</strong> Otevřené budou 1, 4, 9 a 16, tedy \(\lfloor\sqrt{20}\rfloor=4\) skříňky. <strong>1000 skříněk:</strong> Zůstane otevřeno \(\lfloor\sqrt{1000}\rfloor=31\) skříněk. <strong>Druhé stejné kolo:</strong> Kdyby všech 100 žáků zopakovalo své průchody ještě jednou, každá skříňka by se přepnula celkem suděkrát a všechny by byly zavřené.</p>
+<h3>Školní demonstrace</h3>
+<p>Stačí 20 kartiček s čísly 1 až 20. Polož je čísly dolů (zavřeno). Postupně nechej žáky s čísly 1 až 20 otáčet všechny kartičky, jejichž číslo je násobkem jejich pořadí. Po dvacátém žákovi zůstanou čísly nahoru jen 1, 4, 9 a 16. Potom nechej třídu odvodit výsledek pro 100 skříněk bez dalšího otáčení. Varianta s 20 kartičkami je vhodnější než fyzicky obcházet 100 skříněk.</p>
+<div class="sources">Zdroje: <a href="https://mathworld.wolfram.com/LockerPuzzle.html" target="_blank" rel="noopener">Wolfram MathWorld – Locker Puzzle (důkaz pomocí dvojic dělitelů)</a>; <a href="https://tasks.illustrativemathematics.org/content-standards/tasks/938" target="_blank" rel="noopener">Illustrative Mathematics – úloha se skříňkami pro školní výuku</a>; <a href="https://demonstrations.wolfram.com/TheLockerProblem/" target="_blank" rel="noopener">Wolfram Demonstrations Project – interaktivní ukázka</a>.</div>
+</div></details>
+</article>
