@@ -1,6 +1,6 @@
 {
   "purpose": "Persistentní seznam již použitých nebo odeslaných hádanek, aby se neopakovaly ani tehdy, když zápis do index.html selže.",
-  "last_subject": "fyzika",
+  "last_subject": "matematika",
   "topics": [
     "problém 100 vězňů a krabic",
     "mravenec na natahující se gumě",
@@ -50,6 +50,7 @@
     "Kaprekarova konstanta 6174: opakované odečítání nejmenšího a největšího čtyřciferného uspořádání číslic vede nejvýše za sedm kroků k 6174 (se zachováním úvodních nul)",
     "syrové a vařené vejce: po krátkém zastavení skořápky se syrové vejce znovu roztočí díky setrvačnosti tekutého obsahu",
     "sto skříněk: po přepnutí všech násobků čísel 1 až 100 zůstane otevřeno právě deset skříněk s čísly úplných čtverců",
-    "var vody při sníženém tlaku: voda o 40 °C může vřít ve stříkačce při poklesu absolutního tlaku přibližně na 7,4 kPa"
+    "var vody při sníženém tlaku: voda o 40 °C může vřít ve stříkačce při poklesu absolutního tlaku přibližně na 7,4 kPa",
+    "Ramseyho problém šesti lidí: v každé šestici jsou tři vzájemní známí nebo tři vzájemní neznámí"
   ]
 }
