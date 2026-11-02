@@ -1,0 +1,29 @@
+<article class="card" data-slug="sest-lidi-a-nevyhnutelna-trojice">
+<span class="tag">Matematika · kombinatorika, grafy a Dirichletův princip</span>
+<h2>👥 Šest lidí a nevyhnutelná trojice</h2>
+<p class="lead">Na setkání přijde šest lidí. O každé dvojici platí právě jedna z možností: buď se oba navzájem znají, nebo se navzájem neznají. Známost je tedy vzájemná.</p>
+<div class="question">Lze vztahy mezi těmito šesti lidmi uspořádat tak, aby mezi nimi nebyli ani tři lidé, kteří se všichni navzájem znají, ani tři, kteří se všichni navzájem neznají?</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p><strong>Nelze. V každé šestici musí existovat buď trojice vzájemných známých, nebo trojice vzájemně neznámých.</strong> Jde o nejmenší klasický případ Ramseyovy teorie: \(R(3,3)=6\). Důkaz nepotřebuje znát konkrétní vztahy všech účastníků.</p>
+<div class="step"><h4>1. Stačí sledovat jediného člověka</h4>
+<p>Vyberme člověka A. Ten má vztah k pěti ostatním. Každý vztah je jednoho ze dvou druhů: „znají se“ nebo „neznají se“. Podle Dirichletova principu musí být alespoň tři vztahy stejného druhu:</p>
+<div class="formula">\[\left\lceil\frac{6-1}{2}\right\rceil=\left\lceil\frac52\right\rceil=\boxed{3}.\]</div>
+<p>Symbol \(\lceil x\rceil\) znamená zaokrouhlení nahoru. Číslo 5 nelze rozdělit do dvou skupin tak, aby v obou byli nejvýše dva lidé.</p>
+<p>Předpokládejme například, že A zná alespoň tři lidi B, C, D. Jestliže se některá dvojice z B, C, D zná, vytvoří s A trojici vzájemných známých. Jestliže se nezná žádná z těchto tří dvojic, jsou B, C, D trojicí vzájemně neznámých. Kdyby A naopak alespoň tři lidi neznal, argument proběhne stejně s prohozenými druhy vztahů. Třetí možnost neexistuje.</p></div>
+<div class="step"><h4>2. Úplný číselný příklad krok za krokem</h4>
+<p>Šest lidí označme A, B, C, D, E, F. Nejprve spočítáme počet dvojic: každá ze šesti osob má pět možných partnerů, ale dvojici bychom takto započítali dvakrát. Proto:</p>
+<div class="formula">\[N=\binom62=\frac{6\cdot5}{2}=\boxed{15\text{ dvojic}}.\]</div>
+<p>Každá z 15 dvojic je buď dvojicí známých, nebo neznámých. Dejme tomu, že A zná B, C, D a nezná E, F. Má tedy přesně tři známé a dva neznámé. Podívejme se na tři vztahy mezi B, C, D:</p>
+<ul><li>Pokud se B a C znají, pak se navzájem znají A, B, C — hledaná trojice je hotová.</li><li>Pokud se B a C neznají, ale znají se B a D nebo C a D, dostaneme obdobně trojici známých s A.</li><li>Pokud se neznají B–C, B–D ani C–D, jsou B, C, D tři vzájemně neznámí.</li></ul>
+<p><strong>Význam výpočtu:</strong> z pěti vztahů člověka A získáme vždy alespoň tři stejného typu; mezi těmito třemi lidmi pak nevyhnutelně vznikne jedna ze dvou hledaných trojic. Ostatní vztahy už výsledek nemohou zrušit.</p></div>
+<div class="step"><h4>3. Proč nestačí pět lidí?</h4>
+<p>Označme pět osob A, B, C, D, E. Ať se znají pouze dvojice <strong>A–B, B–C, C–D, D–E a E–A</strong> — známí tvoří pětiúhelník. Zbývající dvojice <strong>A–C, A–D, B–D, B–E a C–E</strong> se neznají; i ty tvoří pětiúhelník. Ani v jednom pětiúhelníku nejsou tři vrcholy navzájem propojené. Nemáme tedy ani trojici vzájemných známých, ani trojici vzájemně neznámých. Pět lidí nestačí, šest už ano:</p>
+<div class="formula">\[\boxed{R(3,3)=6}.\]</div></div>
+<div class="wow">Překvapení: Ať vztahy mezi šesti lidmi namícháš jakkoli, jedné z těchto dvou trojic se nevyhneš. Přitom u pěti lidí se tomu vyhnout dá!</div>
+<h3>Varianty a předpoklady</h3>
+<p><strong>Osm nebo sto lidí:</strong> tvrzení platí také, protože z nich lze vybrat libovolnou šestici. <strong>Čtyři vzájemní známí nebo čtyři vzájemně neznámí:</strong> nejmenší zaručený počet osob je až \(R(4,4)=18\). <strong>Důležitý předpoklad:</strong> každá dvojice má jednoznačný vzájemný vztah „znají se / neznají se“. U jednostranného „sleduje na sociální síti“ by se tvrzení takto použít nedalo.</p>
+<h3>Školní demonstrace</h3>
+<p>Nakresli šest bodů A–F do kruhu. Mezi každou dvojici žáci nakreslí červenou čáru, pokud se dvojice „zná“, a modrou, pokud se „nezná“. Celkem musí vybarvit \(\binom62=15\) čar. Ať se pokusí zabránit vzniku jednobarevného trojúhelníku: nikdy se jim to nepodaří. Pro porovnání zopakujte hru s pěti body a vybarvěte obvod pětiúhelníku červeně a jeho diagonály modře; tam jednobarevný trojúhelník nevznikne. Jde o čistě papírovou aktivitu, bez speciálních pomůcek.</p>
+<div class="sources">Ověřené zdroje: <a href="https://mathworld.wolfram.com/RamseyNumber.html" target="_blank" rel="noopener">Wolfram MathWorld – Ramsey Number</a>; <a href="https://www.math.chalmers.se/Math/Grundutb/GU/MMG610/V16/lecture10.pdf" target="_blank" rel="noopener">Chalmers University of Technology – přednáška, důkaz R(3,3)=6</a>; <a href="https://sites.cs.ucsb.edu/~rich/class/cs293-cloud/notes/Ramsey/index.html" target="_blank" rel="noopener">University of California, Santa Barbara – Let's Party (obrázky pěti a šesti vrcholů)</a>.</div>
+</div></details>
+</article>
