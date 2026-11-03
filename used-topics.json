@@ -1,6 +1,6 @@
 {
   "purpose": "Persistentní seznam již použitých nebo odeslaných hádanek, aby se neopakovaly ani tehdy, když zápis do index.html selže.",
-  "last_subject": "matematika",
+  "last_subject": "fyzika",
   "topics": [
     "problém 100 vězňů a krabic",
     "mravenec na natahující se gumě",
@@ -51,6 +51,7 @@
     "syrové a vařené vejce: po krátkém zastavení skořápky se syrové vejce znovu roztočí díky setrvačnosti tekutého obsahu",
     "sto skříněk: po přepnutí všech násobků čísel 1 až 100 zůstane otevřeno právě deset skříněk s čísly úplných čtverců",
     "var vody při sníženém tlaku: voda o 40 °C může vřít ve stříkačce při poklesu absolutního tlaku přibližně na 7,4 kPa",
-    "Ramseyho problém šesti lidí: v každé šestici jsou tři vzájemní známí nebo tři vzájemní neznámí"
+    "Ramseyho problém šesti lidí: v každé šestici jsou tři vzájemní známí nebo tři vzájemní neznámí",
+    "děravá láhev při volném pádu: proud vody z otvoru ustane, protože ve společně padající soustavě zaniká hydrostatický tlakový rozdíl"
   ]
 }
