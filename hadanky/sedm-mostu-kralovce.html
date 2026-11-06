@@ -1,0 +1,29 @@
+<article class="card" data-slug="sedm-mostu-kralovce">
+<span class="tag">Matematika · teorie grafů, parita a Eulerovy tahy</span>
+<h2>🌉 Sedm mostů, které nejdou projít</h2>
+<p class="lead">Město rozděluje řeka na čtyři části pevniny A, B, C, D. Mezi nimi vede sedm mostů: dva spojují A–B, dva A–C, jeden A–D, jeden B–D a jeden C–D. Přes řeku se smí chodit pouze po mostech; po každé části pevniny se lze volně pohybovat.</p>
+<div class="question">Dokážeš naplánovat jedinou procházku, při níž přejdeš všech sedm mostů právě jednou? Začít i skončit smíš kdekoli.</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p><strong>Nejde to, i když si smíš vybrat libovolný začátek a konec.</strong> Jde o klasickou úlohu sedmi mostů historického Královce (Königsbergu), kterou vyřešil Leonhard Euler.</p>
+<div class="step"><h4>1. Místo mapy stačí čtyři body</h4>
+<p>Každou část pevniny nahradíme bodem (vrcholem) a každý most čarou (hranou). Dvě čáry mezi A a B jsou dva různé mosty, nikoli jedna čára. Počet mostů připojených k vrcholu se nazývá jeho <em>stupeň</em>.</p>
+<p>Podle zadání mají jednotlivé vrcholy stupně A: 5, B: 3, C: 3, D: 3. Všechny čtyři jsou liché.</p></div>
+<div class="step"><h4>2. Proč vadí lichý počet?</h4>
+<p>Každou částí pevniny, která není začátkem ani koncem celé trasy, musíme po nějakém mostě přijít a po jiném odejít. Použité mosty se tedy párují: jeden pro příchod, jeden pro odchod. Takový vrchol musí mít sudý stupeň. Nanejvýš dva vrcholy mohou být výjimkou: počáteční a koncový. Proto lze projít každou hranu právě jednou jen tehdy, má-li souvislý graf nejvýše dva vrcholy lichého stupně. Zde jsou čtyři — nemožné.</p></div>
+<div class="step"><h4>3. Číselný příklad krok za krokem</h4>
+<p>Sečteme stupně všech čtyř částí: A má 5 mostů, ostatní B, C, D mají po 3. Dostáváme</p>
+<div class="formula">\[S=5+3+3+3=14.\]</div>
+<p>Každý most jsme započítali dvakrát, protože má dva konce. Skutečný počet mostů proto je</p>
+<div class="formula">\[m=\frac{S}{2}=\frac{14}{2}=\boxed{7}.\]</div>
+<p>Počet lichých vrcholů je</p>
+<div class="formula">\[L=1+1+1+1=\boxed{4>2}.\]</div>
+<p><strong>Význam:</strong> všech sedm mostů existuje, ale čtyři liché konce nelze rozdělit na pouhý začátek a konec jediné procházky. Nezáleží na délce mostů, tvaru řeky ani na počtu pokusů.</p></div>
+<div class="wow">Překvapení: Ani dokonalá znalost města nepomůže. Jediné čtyři počty — 5, 3, 3, 3 — stačí k důkazu, že hledaná trasa neexistuje!</div>
+<h3>Varianta: Co změní odstranění jednoho mostu?</h3>
+<p>Odstraňme most A–D. Zbude šest mostů a stupně budou A: 4, B: 3, C: 3, D: 2. Teď jsou liché jen dva vrcholy, B a C, takže průchod existuje. Konkrétní trasa je <strong>B–A–C–A–B–D–C</strong>: mosty B–A a A–C jsou použity vždy dvakrát jako dva <em>různé</em> paralelní mosty, ostatní právě jednou. Celkem projdeme šest různých mostů. Začneme v B a skončíme v C.</p>
+<p>Jestliže chceme skončit tam, kde jsme začali, musí mít v souvislém grafu všechny vrcholy sudý stupeň.</p>
+<h3>Školní demonstrace</h3>
+<p>Nakresli na tabuli čtyři kruhy A, B, C, D a spoj je sedmi čarami podle zadání: A–B dvakrát, A–C dvakrát, A–D jednou, B–D jednou a C–D jednou. Žáci se snaží jedním nepřerušovaným tahem projít každou čáru přesně jednou. Potom spočítají počet čar u každého kruhu. Smaž čáru A–D a nech je zkusit trasu B–A–C–A–B–D–C. Vysvětli, proč se v každém vnitřním bodě musí příchody a odchody párovat.</p>
+<div class="sources">Zdroje: <a href="https://mathworld.wolfram.com/KoenigsbergBridgeProblem.html" target="_blank" rel="noopener">Wolfram MathWorld – Königsberg Bridge Problem</a>; <a href="https://www.cs.purdue.edu/homes/wxg/EulerLect.pdf" target="_blank" rel="noopener">Purdue University – Euler a sedm mostů</a>; <a href="https://www.scientificamerican.com/article/how-the-seven-bridges-of-koenigsberg-spawned-new-math/" target="_blank" rel="noopener">Scientific American – historie úlohy a vznik teorie grafů</a>.</div>
+</div></details>
+</article>
