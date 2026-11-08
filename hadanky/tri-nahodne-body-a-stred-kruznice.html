@@ -1,0 +1,29 @@
+<article class="card" data-slug="tri-nahodne-body-a-stred-kruznice">
+<span class="tag">Matematika · geometrická pravděpodobnost</span>
+<h2>🎯 Tři body a střed kružnice</h2>
+<p class="lead">Na obvodu kružnice nezávisle a zcela náhodně vybereme tři body A, B a C. Každé místo na obvodu je stejně pravděpodobné. Body spojíme a vznikne trojúhelník.</p>
+<div class="question">Jaká je pravděpodobnost, že střed kružnice bude ležet uvnitř tohoto trojúhelníku? Je to více, nebo méně než polovina?</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p><strong>Střed leží uvnitř trojúhelníku přesně s pravděpodobností 1/4, tedy 25 %.</strong> Nezáleží na poloměru kružnice. Rozhodující je, jak jsou tři body rozloženy po obvodu.</p>
+<div class="step"><h4>1. Kdy střed uvnitř není?</h4>
+<p>Střed neleží uvnitř trojúhelníku právě tehdy, když lze všechny tři vrcholy umístit do některé půlkružnice (oblouku délky 180°). Kdyby byly všechny body na jedné straně přímky procházející středem, nemůže jejich trojúhelník střed obklopovat. A naopak: když střed není uvnitř, existuje přímka procházející středem, která všechny tři body odděluje na jednu stranu. Hraniční případy s body přesně na průměru mají při spojitém náhodném výběru pravděpodobnost nula.</p></div>
+<div class="step"><h4>2. Úplný číselný výpočet</h4>
+<p>Vezměme konkrétní bod A. Projděme po obvodu od A ve směru hodinových ručiček úsek dlouhý 180°. Je to přesně polovina obvodu, takže pravděpodobnost, že v něm skončí náhodný bod B, je</p>
+<div class="formula">\[P(B\text{ v půlkružnici od A})=\frac{180^\circ}{360^\circ}=\frac12.\]</div>
+<p>Totéž nezávisle platí pro bod C. Pravděpodobnost, že <em>oba</em> skončí v této půlkružnici začínající v A, je součin:</p>
+<div class="formula">\[P_A=\frac12\cdot\frac12=\frac14=25\,\%.\]</div>
+<p>Jestliže všechny tři body leží v některé půlkružnici, pak (s pravděpodobností 1) právě jeden z bodů A, B, C je jejím počátečním bodem ve směru hodinových ručiček. Události „oba další body leží v půlkružnici od A“, „od B“ a „od C“ se proto nepřekrývají, až na případy s nulovou pravděpodobností. Sečteme jejich pravděpodobnosti:</p>
+<div class="formula">\[P(\text{střed mimo})=3\cdot\frac14=\frac34=75\,\%.\]</div>
+<p>Hledaný jev je doplněk:</p>
+<div class="formula">\[P(\text{střed uvnitř})=1-\frac34=\boxed{\frac14=25\,\%}.\]</div>
+<p><strong>Význam:</strong> ze 100 nezávislých náhodných trojúhelníků očekáváme přibližně 25 takových, které obsahují střed. Neznamená to, že v každé stovce jich bude přesně 25.</p></div>
+<div class="step"><h4>3. Kontrola na konkrétních úhlech</h4>
+<p>Zvolme body v polohách 0°, 120° a 240°. Mezery mezi sousedními body jsou 120°, 120° a 120°: žádná nedosahuje 180°, a proto střed leží uvnitř trojúhelníku. Naproti tomu pro body 0°, 30° a 70° jsou všechny tři body v jediném oblouku délky 70°, takže střed leží mimo. Tyto příklady ukazují obě možnosti, samy však ještě neurčují pravděpodobnost.</p></div>
+<div class="wow">Překvapení: Přestože body vybíráme po celém obvodu kružnice, ve třech čtvrtinách případů trojúhelník její střed vůbec neobsahuje!</div>
+<h3>Varianta</h3>
+<p>Co kdybychom zvolili čtyři náhodné body a místo trojúhelníku vytvořili jejich konvexní obal? Pravděpodobnost, že obsahuje střed, je již \(\frac12\). Obecně pro \(n\ge3\) nezávislých rovnoměrně zvolených bodů na kružnici platí \(P(\text{střed v konvexním obalu})=1-\frac{n}{2^{n-1}}\). Pro \(n=4\): \(1-\frac4{2^3}=1-\frac48=\frac12\).</p>
+<h3>Školní demonstrace</h3>
+<p>Na papír nakresli kružnici a vyznač její střed. Žáci mohou třikrát nezávisle roztočit ukazatel na kruhovém číselníku, případně použít generátor tří rovnoměrných náhodných úhlů od 0° do 360°. Body vyznačí na obvodu a spojí. Ve třídě sesbírejte výsledky alespoň 40–100 pokusů a porovnejte podíl trojúhelníků obsahujících střed s teoretickými 25 %. Důležité je vybírat body nezávisle, ne záměrně rovnoměrně rozmístěné.</p>
+<div class="sources">Zdroje: <a href="https://www.cut-the-knot.org/m/Probability/ThreeRandomPointsOnCircle.shtml" target="_blank" rel="noopener">Cut-the-Knot – Three Random Points on a Circle</a>; <a href="https://arxiv.org/abs/2601.02929" target="_blank" rel="noopener">Ismailov (2026) – With what probability does an inscribed triangle contain a given point?</a>; <a href="https://vamshij.com/books/geometric_probability/read/14/" target="_blank" rel="noopener">Geometric Probability – n random points on a circle</a>.</div>
+</div></details>
+</article>
