@@ -1,0 +1,33 @@
+<article class="card" data-slug="cislo-1089-obracene-cislice">
+<span class="tag">Matematika · číselné kouzlo, poziční zápis a algebra</span>
+<h2>🔮 Číslo, které předpovíš předem</h2>
+<p class="lead">Mysli si libovolné trojciferné číslo, jehož první a poslední číslice se liší alespoň o dvě. Číslo napiš také pozpátku. Odečti menší z obou čísel od většího. Výsledek opět obrať a obě poslední čísla sečti.</p>
+<div class="question">Dokáže učitel předem napsat do zalepené obálky výsledek, přestože neví, jaké číslo si vybereš?</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p><strong>Ano. Výsledek bude vždy 1089.</strong> Volba původního čísla může být libovolná, pokud se jeho krajní číslice liší alespoň o dvě. Prostřední číslice výsledek vůbec neovlivní.</p>
+<div class="step"><h4>1. Úplný číselný příklad</h4>
+<p>Zvolíme číslo <strong>742</strong>. Jeho obrácený zápis je <strong>247</strong>. Odečteme menší od většího:</p>
+<div class="formula">\[742-247=495.\]</div>
+<p>Obrátíme rozdíl: ze 495 vznikne 594. Sečteme:</p>
+<div class="formula">\[495+594=\boxed{1089}.\]</div>
+<p>Vyzkoušejme i číslo 851: obrácené číslo je 158, rozdíl je \(851-158=693\), jeho obrácení je 396 a součet \(693+396=\boxed{1089}\).</p>
+<p><strong>Význam:</strong> dvě různá počáteční čísla vedou přes různá mezivýsledná čísla ke stejnému konečnému součtu.</p></div>
+<div class="step"><h4>2. Proč se prostřední číslice ztratí?</h4>
+<p>Trojciferné číslo s číslicemi \(a,b,c\) lze zapsat jako \(100a+10b+c\). Jeho obrácení má hodnotu \(100c+10b+a\). Pokud \(a&gt;c\), odečtením dostaneme:</p>
+<div class="formula">\[(100a+10b+c)-(100c+10b+a)=99(a-c).\]</div>
+<p>Pokud \(c&gt;a\), postupujeme opačně a vyjde \(99(c-a)\). V obou případech je rozdíl roven \(99d\), kde \(d=|a-c|\). Prostřední číslice \(b\) se vyrušila.</p>
+<p>Protože jsme požadovali \(2\le d\le9\), může rozdíl nabývat jen osmi hodnot:</p>
+<div class="formula">\[198,\ 297,\ 396,\ 495,\ 594,\ 693,\ 792,\ 891.\]</div>
+<p>Každé číslo má prostřední číslici 9 a krajní číslice sečtené dávají 9. Píšeme je jako \(x9y\), kde \(x+y=9\). Po obrácení získáme \(y9x\). Jejich součet je:</p>
+<div class="formula">\[(100x+90+y)+(100y+90+x)=101(x+y)+180.\]</div>
+<p>Dosadíme \(x+y=9\):</p>
+<div class="formula">\[101\cdot9+180=909+180=\boxed{1089}.\]</div>
+<p>Tím je výsledek dokázán pro všechna přípustná počáteční čísla, nikoli jen pro vybrané příklady.</p></div>
+<div class="wow">Učitel může mít výsledek 1089 napsaný v obálce ještě předtím, než si žák zvolí své tajné číslo. Nejde o čtení myšlenek: všechny povolené výpočty končí stejně.</div>
+<h3>Varianty a hranice platnosti</h3>
+<p><strong>Rozdíl krajních číslic právě 1:</strong> například \(211-112=99\). Pokud rozdíl zapíšeme se třemi pozicemi jako <strong>099</strong>, obrátíme jej na <strong>990</strong> a dostaneme \(099+990=1089\). Bez zachování úvodní nuly tento krok nefunguje. <strong>Stejné krajní číslice:</strong> například \(525-525=0\), takže trik selže. Proto je pro základní verzi nejjednodušší vyžadovat rozdíl alespoň 2.</p>
+<h3>Školní demonstrace</h3>
+<p>Před hodinou vlož do obálky papír s číslem 1089. Nech několik žáků nezávisle zvolit trojciferné číslo s rozdílem krajních číslic alespoň dvě a provést výpočty na tabuli. Teprve potom otevři obálku. Následně žáci zkusí odvodit, proč prostřední číslice nemá vliv, a sestaví seznam všech osmi možných rozdílů. Pro rychlou kontrolu použij 742 → 247 → 495 → 594 → 1089.</p>
+<div class="sources">Zdroje: <a href="https://math.hmc.edu/funfacts/magic-1089/" target="_blank" rel="noopener">Harvey Mudd College – Magic 1089 (vysvětlení a algebraický důkaz)</a>; <a href="https://www.abc.net.au/science/surfingscientist/pdf/teachdemo24.pdf" target="_blank" rel="noopener">ABC Science – Teacher Demo 24: Mind Reading (učitelská demonstrace a důkaz)</a>.</div>
+</div></details>
+</article>
