@@ -1,6 +1,6 @@
 {
   "purpose": "Persistentní seznam již použitých nebo odeslaných hádanek, aby se neopakovaly ani tehdy, když zápis do index.html selže.",
-  "last_subject": "matematika",
+  "last_subject": "fyzika",
   "topics": [
     "problém 100 vězňů a krabic",
     "mravenec na natahující se gumě",
@@ -59,6 +59,7 @@
     "ocelová kancelářská sponka udržená na hladině vody povrchovým napětím a její potopení po přidání saponátu",
     "tři nezávisle rovnoměrně zvolené body na kružnici: jejich trojúhelník obsahuje střed s pravděpodobností 1/4",
     "přísavka a atmosférický tlak: ideální přísavka o průměru 5 cm může při úplném vakuu držet silou přibližně 199 N",
-    "číselné kouzlo 1089: obrácení trojciferného čísla, odečtení a sečtení s obráceným rozdílem vždy dá 1089 při rozdílu krajních číslic alespoň dva"
+    "číselné kouzlo 1089: obrácení trojciferného čísla, odečtení a sečtení s obráceným rozdílem vždy dá 1089 při rozdílu krajních číslic alespoň dva",
+    "tři lineární polarizační filtry: vložení prostředního filtru pod úhlem 45° mezi dva zkřížené filtry obnoví průchod světla (ideálně 1/8 původní intenzity)"
   ]
 }
