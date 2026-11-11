@@ -1,0 +1,29 @@
+<article class="card" data-slug="tri-polarizacni-filtry">
+<span class="tag">Fyzika · optika, polarizace světla a Malusův zákon</span>
+<h2>🔆 Třetí filtr rozsvítí tmu</h2>
+<p class="lead">Dva ideální lineární polarizační filtry natočíme vzájemně o 90°. Světlo jimi prakticky neprochází. Nyní mezi ně vložíme třetí lineární polarizační filtr natočený o 45° vůči prvnímu.</p>
+<div class="question">Zůstane tma, nebo přidání dalšího filtru paradoxně propustí více světla?</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p><strong>Světlo se znovu objeví!</strong> Prostřední filtr propouští složku elektrického pole podél své osy a světlo za ním je polarizované pod úhlem 45°. Poslední filtr k němu již není kolmý, takže část světla projde. U ideálních filtrů je to 12,5 % původního nepolarizovaného světla.</p>
+<div class="step"><h4>1. Princip: každý filtr mění i polarizaci</h4>
+<p>Lineární polarizátor propouští složku elektrického pole rovnoběžnou s jeho propustnou osou. Pro lineárně polarizované světlo platí Malusův zákon: \(\displaystyle I_{\mathrm{za}}=I_{\mathrm{před}}\cos^2\theta\), kde \(\theta\) je úhel mezi polarizací dopadajícího světla a osou filtru. Za filtrem má procházející světlo polarizaci ve směru jeho osy. Dva zkřížené ideální filtry (0° a 90°) propustí \(\cos^2 90^\circ=0\) z intenzity za prvním filtrem. Vložený filtr (45°) však změní směr polarizace a poslední filtr již část propustí.</p></div>
+<div class="step"><h4>2. Úplný číselný příklad</h4>
+<p>Uvažujme nepolarizované světlo s intenzitou \(I_0=800\ \mathrm{W/m^2}\) a ideální polarizační filtry. První filtr (osa 0°) propustí polovinu nepolarizované intenzity, protože průměrná hodnota \(\cos^2\theta\) přes náhodné směry polarizace je \(1/2\):</p>
+<div class="formula">\[I_1=\frac{I_0}{2}=\frac{800}{2}=400\ \mathrm{W/m^2}.\]</div>
+<p>Prostřední filtr má osu 45° od prvního. Malusův zákon dává:</p>
+<div class="formula">\[I_2=I_1\cos^2 45^\circ=400\cdot\frac12=200\ \mathrm{W/m^2}.\]</div>
+<p>Poslední filtr má osu 90° od prvního, tedy 45° od prostředního. Proto:</p>
+<div class="formula">\[I_3=I_2\cos^2 45^\circ=200\cdot\frac12=\boxed{100\ \mathrm{W/m^2}}.\]</div>
+<p><strong>Význam:</strong> ze vstupních \(800\ \mathrm{W/m^2}\) projde \(100/800=0{,}125=12{,}5\,\%\). Bez prostředního filtru by při ideálně kolmých osách prošlo \(0\,\%\). Žádná energie nevzniká: zbývající energie je absorbována nebo odražena filtry.</p></div>
+<div class="step"><h4>3. Který úhel je nejlepší?</h4>
+<p>Je-li prostřední filtr natočený o \(\alpha\) od prvního, poslední je vůči němu pod úhlem \(90^\circ-\alpha\). Pak:</p>
+<div class="formula">\[I_3=\frac{I_0}{2}\cos^2\alpha\sin^2\alpha=\frac{I_0}{8}\sin^2(2\alpha).\]</div>
+<p>Maximum nastane při \(\alpha=45^\circ\). Při \(\alpha=30^\circ\) je \(\sin^2 60^\circ=3/4\), a tedy \(I_3=3I_0/32=75\ \mathrm{W/m^2}\) pro stejné vstupní světlo. Při 0° nebo 90° se znovu dostaneme k nulovému průchodu v ideálním případě.</p></div>
+<div class="wow">Přidáním další překážky se z úplné tmy může stát viditelné světlo. Filtr totiž nejen zeslabuje intenzitu, ale současně určuje nový směr polarizace pro další filtr.</div>
+<h3>Varianty a omezení</h3>
+<p>Pokud je vstupní světlo již lineárně polarizované podél první osy, první filtr jej ideálně nezeslabí a trojice při úhlech 0°–45°–90° propustí \(1/4\) původní intenzity. U skutečných fólií jsou ztráty a nedokonalé potlačení kolmé polarizace, proto čísla 0 % a 12,5 % představují idealizaci. Používej tři <strong>lineární</strong> polarizátory, nikoli automaticky kruhové fotografické filtry.</p>
+<h3>Školní demonstrace</h3>
+<p>Vezmi tři lineární polarizační fólie a světlou difuzní plochu (například osvětlené bílé okno bez přímého pohledu do Slunce). Dvě fólie otoč tak, aby jejich překryv co nejvíce ztmavl. Mezi ně vlož třetí fólii, otoč ji přibližně o 45° a sleduj, jak překryv zesvětlá. Prostřední fólii pomalu otáčej a vyhledej dvě maxima během půlotáčky. Žáci mohou zkusit předem odhadnout, zda třetí fólie světlo zeslabí, nebo naopak část obnoví.</p>
+<div class="sources">Zdroje: <a href="https://web.physics.ucsb.edu/~lecturedemonstrations/Composer/Pages/84.36.html" target="_blank" rel="noopener">University of California, Santa Barbara – Polarizers (Malusův zákon a experiment se třemi filtry)</a>; <a href="https://lecdem.physics.umd.edu/demo-highlight-polarizers-and-light-source.html" target="_blank" rel="noopener">University of Maryland – Polarizers and Light Source (školní demonstrace)</a>; <a href="https://www.sfu.ca/~mxchen/phys1021003/P102LN31.pdf" target="_blank" rel="noopener">Simon Fraser University – Three Polaroids (výpočet 1/8)</a>.</div>
+</div></details>
+</article>
