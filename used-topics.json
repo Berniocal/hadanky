@@ -1,6 +1,6 @@
 {
   "purpose": "Persistentní seznam již použitých nebo odeslaných hádanek, aby se neopakovaly ani tehdy, když zápis do index.html selže.",
-  "last_subject": "fyzika",
+  "last_subject": "matematika",
   "topics": [
     "problém 100 vězňů a krabic",
     "mravenec na natahující se gumě",
@@ -60,6 +60,7 @@
     "tři nezávisle rovnoměrně zvolené body na kružnici: jejich trojúhelník obsahuje střed s pravděpodobností 1/4",
     "přísavka a atmosférický tlak: ideální přísavka o průměru 5 cm může při úplném vakuu držet silou přibližně 199 N",
     "číselné kouzlo 1089: obrácení trojciferného čísla, odečtení a sečtení s obráceným rozdílem vždy dá 1089 při rozdílu krajních číslic alespoň dva",
-    "tři lineární polarizační filtry: vložení prostředního filtru pod úhlem 45° mezi dva zkřížené filtry obnoví průchod světla (ideálně 1/8 původní intenzity)"
+    "tři lineární polarizační filtry: vložení prostředního filtru pod úhlem 45° mezi dva zkřížené filtry obnoví průchod světla (ideálně 1/8 původní intenzity)",
+    "Fitchův–Cheneyho trik s pěti kartami: pořadí čtyř odkrytých karet jednoznačně určí pátou skrytou kartu díky principu holubníku a šesti permutacím"
   ]
 }
