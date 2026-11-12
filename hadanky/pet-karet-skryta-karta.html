@@ -1,0 +1,29 @@
+<article class="card" data-slug="pet-karet-skryta-karta">
+<span class="tag">Matematika · kombinatorika, permutace a princip holubníku</span>
+<h2>🃏 Pět karet a neviditelná pátá</h2>
+<p class="lead">Divák náhodně vybere pět různých karet z běžného balíčku 52 karet. Asistent si je prohlédne, jednu odloží lícem dolů a zbývající čtyři vyloží lícem nahoru v libovolně zvoleném pořadí. Kouzelník neviděl žádnou z původních pěti karet ani žádné gesto asistenta; uvidí pouze čtyři vyložené karty.</p>
+<div class="question">Mohou se kouzelník a asistent předem domluvit na pravidle, díky kterému kouzelník vždy přesně určí skrytou pátou kartu?</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p><strong>Ano, a to pro libovolných pět různých karet.</strong> Asistent volí nejen skrytou kartu, ale i pořadí zbývajících čtyř. Tím nenápadně předává informaci.</p>
+<div class="step"><h4>1. Proč vždy najdeme dvě karty stejné barvy?</h4>
+<p>V balíčku jsou čtyři karetní barvy (♣, ♦, ♥, ♠), ale divák vybral pět karet. Podle principu holubníku mají alespoň dvě stejnou barvu. Jednu z nich asistent ukáže jako <strong>první</strong>, druhou skryje. První karta tedy sděluje barvu skryté karty.</p></div>
+<div class="step"><h4>2. Jak sdělit její hodnotu?</h4>
+<p>Hodnoty uspořádáme do kruhu: A, 2, 3, …, 10, J, Q, K, A. Mezi dvěma různými kartami stejné barvy je v jednom z obou směrů po kruhu vzdálenost nejvýše šest kroků. Asistent proto vybere jako první ukázanou tu kartu, od které lze ke skryté dojít <strong>vpřed za 1 až 6 kroků</strong>. Proč? Obě kladné vzdálenosti sečtené dávají 13, takže menší je nejvýše 6.</p>
+<p>Další tři karty asistent seřadí podle předem sjednaného úplného pořadí všech karet (např. nejdříve podle hodnoty A až K, při shodě podle barvy ♣, ♦, ♥, ♠). Označí je L (nejnižší), M (prostřední), H (nejvyšší). Jejich pořadí může mít přesně</p>
+<div class="formula">\[3!=3\cdot2\cdot1=\boxed{6}\]</div>
+<p>podob. Domluva: 1 = LMH, 2 = LHM, 3 = MLH, 4 = MHL, 5 = HLM, 6 = HML. Tím asistent zakóduje potřebný počet kroků.</p></div>
+<div class="step"><h4>3. Úplný číselný příklad</h4>
+<p>Divák vybere <strong>4♥, 6♥, 5♣, 9♦, K♠</strong>. Dvě srdcové karty jsou 4♥ a 6♥. Od 4 k 6 jdeme vpřed o dva kroky: \(4\to5\to6\). Asistent tedy skryje <strong>6♥</strong> a jako první položí <strong>4♥</strong>.</p>
+<p>Ze zbylých tří karet je podle domluveného pořadí L = 5♣, M = 9♦, H = K♠. Dva kroky znamenají pořadí <strong>LHM</strong>. Asistent vyloží:</p>
+<div class="formula">\[\boxed{4\heartsuit}\quad 5\clubsuit\quad K\spadesuit\quad 9\diamondsuit.\]</div>
+<p>Kouzelník vidí první kartu 4♥, a tedy ví, že skrytá je srdcová. Další tři karty mají pořadí LHM, což znamená číslo 2. Počítá dva kroky vpřed od čtyřky:</p>
+<div class="formula">\[4+2=6\quad\Rightarrow\quad\boxed{6\heartsuit}.\]</div>
+<p><strong>Význam:</strong> pořadí čtyř viditelných karet nese informaci, která umožní jednoznačně určit skrytou kartu bez telepatie.</p></div>
+<div class="wow">Pět úplně náhodných karet stačí k „čtení myšlenek“: první odkrytá karta určuje barvu, pořadí dalších tří karet jedno ze šesti možných čísel.</div>
+<h3>Varianty a předpoklady</h3>
+<p>U číselné hry stačí nahradit karetní barvy čtyřmi symboly a hodnoty čísly 1 až 13 v kruhu. Trik vyžaduje standardní balíček bez žolíků, pět různých karet, společnou domluvu a možnost asistenta zvolit skrytou kartu i pořadí ostatních. Pokud divák určí, která konkrétní karta musí být skrytá, tento jednoduchý postup již nemusí fungovat.</p>
+<h3>Školní demonstrace</h3>
+<p>Se dvěma předem domluvenými žáky nejprve nacvičte šest pořadí LMH až HML. Ostatní vyberou pět karet, asistent jednu skryje a čtyři seřadí; druhý žák skrytou určí. Pak společně vysvětlete princip holubníku, kruhovou vzdálenost nejvýše šest a šest permutací. Pro rychlý nácvik použijte uvedenou pětici 4♥, 6♥, 5♣, 9♦, K♠.</p>
+<div class="sources">Zdroje: <a href="https://sites.math.washington.edu/~mathcircle/mathhour/archive/talks_2015/slides2.pdf" target="_blank" rel="noopener">University of Washington – The Five-Card Trick Solution (Fitch Cheney)</a>; <a href="https://sites.lafayette.edu/smithder/files/2010/05/MoMathFamilyTrackHandout.pdf" target="_blank" rel="noopener">Lafayette College – The Fitch Cheney Five-Card Trick</a>.</div>
+</div></details>
+</article>
