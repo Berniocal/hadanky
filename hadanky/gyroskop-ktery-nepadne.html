@@ -1,0 +1,34 @@
+<article class="card" data-slug="gyroskop-ktery-nepadne">
+<span class="tag">Fyzika · mechanika, moment hybnosti a gyroskopická precese</span>
+<h2>🌀 Kolo, které nepadá dolů</h2>
+<p class="lead">Vodorovně umístěné kolo má osu podepřenou jen na jednom konci. Jeho těžiště je mimo podpěru, takže na něj působí tíha vytvářející moment síly. Nejprve kolo stojí, podruhé se rychle otáčí kolem vlastní osy.</p>
+<div class="question">Co udělá volný konec osy v obou případech? Spadne rychle dolů, nebo se může začít pohybovat úplně jiným směrem?</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p><strong>Netočící se kolo se začne sklápět dolů. Rychle roztočené kolo se za vhodných podmínek místo toho pomalu otáčí kolem svislé osy.</strong> Tomuto pohybu říkáme <strong>gyroskopická precese</strong>. Není to popření gravitace: právě tíha vyvolává moment síly, který mění směr momentu hybnosti.</p>
+<h3>Proč se osa pohybuje do strany?</h3>
+<p>Roztočené kolo má moment hybnosti \(\vec L=I\vec\omega\), jehož směr leží podél osy kola. Pro moment síly platí \(\vec M=\mathrm d\vec L/\mathrm dt\). U vodorovné osy a svislé tíhy je moment tíhové síly vodorovný a kolmý na \(\vec L\). Proto mění hlavně <em>směr</em> vektoru \(\vec L\), nikoli jeho velikost: osa obíhá kolem svislice.</p>
+<div class="step"><h4>Úplný číselný příklad</h4>
+<p>Uvažujme modelové homogenní plné kolo (disk) o hmotnosti \(m=1{,}0\,\mathrm{kg}\), poloměru \(R=0{,}20\,\mathrm m\), se vzdáleností těžiště od podpěry \(a=0{,}15\,\mathrm m\). Kolo se otáčí frekvencí \(f=20\,\mathrm{ot/s}\). Zanedbejme tření a předpokládejme ustálenou pomalou precesi.</p>
+<p><strong>1. Moment setrvačnosti.</strong> Pro homogenní plný disk kolem osy symetrie:</p>
+<div class="formula">\[I=\frac12 mR^2=\frac12\cdot1{,}0\cdot(0{,}20)^2=\boxed{0{,}020\ \mathrm{kg\,m^2}}.\]</div>
+<p><strong>2. Úhlová rychlost otáčení.</strong> Jedna otáčka odpovídá \(2\pi\) radiánům:</p>
+<div class="formula">\[\omega=2\pi f=2\pi\cdot20\approx125{,}66\ \mathrm{rad/s}.\]</div>
+<p><strong>3. Moment hybnosti kola.</strong></p>
+<div class="formula">\[L=I\omega=0{,}020\cdot125{,}66\approx\boxed{2{,}513\ \mathrm{kg\,m^2/s}}.\]</div>
+<p><strong>4. Moment tíhové síly.</strong> Tíha působí kolmo k vodorovné spojnici podpěry a těžiště:</p>
+<div class="formula">\[M=mga=1{,}0\cdot9{,}81\cdot0{,}15=\boxed{1{,}4715\ \mathrm{N\,m}}.\]</div>
+<p><strong>5. Rychlost precese.</strong> Při ustálené pomalé precesi platí \(M=\Omega L\), tedy:</p>
+<div class="formula">\[\Omega=\frac{M}{L}=\frac{1{,}4715}{2{,}513}\approx\boxed{0{,}586\ \mathrm{rad/s}}.\]</div>
+<p><strong>6. Doba jedné precese.</strong></p>
+<div class="formula">\[T=\frac{2\pi}{\Omega}\approx\frac{6{,}283}{0{,}586}\approx\boxed{10{,}7\ \mathrm s}.\]</div>
+<p><strong>Význam:</strong> Zatímco disk vykoná 20 vlastních otáček za sekundu, jeho osa v tomto idealizovaném modelu oběhne svislici přibližně jednou za 10,7 sekundy. Podmínka pomalé precese je splněna: \(0{,}586\ll125{,}66\).</p></div>
+<h3>Co je na tom překvapivé?</h3>
+<p>Gravitace se nezměnila, ale rychlá rotace zásadně změnila odpověď tělesa na moment síly. Rychlejší vlastní rotace při ostatních stejných podmínkách vede k <strong>pomalejší</strong> precesi, protože \(\Omega=mga/(I\omega)\). Po zpomalení kola se začne projevovat i klesání osy a kývání (nutace); skutečné kolo se tedy nemusí držet dokonale vodorovně.</p>
+<h3>Varianty a předpoklady</h3>
+<p>Zdvojnásobíme-li frekvenci z 20 na 40 ot/s a ostatní parametry zachováme, vyjde \(\Omega\approx0{,}293\,\mathrm{rad/s}\) a \(T\approx21{,}4\,\mathrm s\). Výpočet předpokládá osově symetrický homogenní disk, pevnou podpěru, zanedbatelné tření a přibližně ustálenou pomalou precesi. Skutečné jízdní kolo má jiný moment setrvačnosti a jeho pohyb se může lišit.</p>
+<h3>Školní demonstrace</h3>
+<p>Vezměte demonstrační gyroskop nebo pevně uchycené jízdní kolo s bezpečnými rukojeťmi na ose. Nejdřív ukažte, co se stane s neroztočeným kolem při podepření jen na jednom konci. Poté jej roztočte a na stabilním závěsu či podpěře ukažte pomalé otáčení osy do strany. Žáci mohou předem odhadovat směr pohybu a pozorovat změnu při zpomalování. Nepoužívejte nestabilní podpěru ani nezajištěné těžké kolo; ruce držte mimo paprsky.</p>
+<div class="wow">Kolo se nepohybuje proti gravitaci: moment tíhy mu místo okamžitého sklopení mění směr osy rotace.</div>
+<div class="sources">Zdroj: <a href="https://openstax.org/books/university-physics-volume-1/pages/11-4-precession-of-a-gyroscope" target="_blank" rel="noopener">OpenStax, University Physics, 11.4 – Precession of a Gyroscope</a>; <a href="https://openstax.org/books/college-physics-ap-courses-2e/pages/10-7-gyroscopic-effects-vector-aspects-of-angular-momentum" target="_blank" rel="noopener">OpenStax – Gyroscopic Effects</a>.</div>
+</div></details>
+</article>
