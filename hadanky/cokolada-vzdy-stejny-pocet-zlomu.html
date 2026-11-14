@@ -1,0 +1,16 @@
+<article class="card" data-slug="cokolada-vzdy-stejny-pocet-zlomu">
+<span class="tag">Matematika · logika, invariant a kombinatorika</span>
+<h2>🍫 Čokoláda, kterou nelze rozlámat rychleji</h2>
+<p class="lead">Máš tabulku čokolády se 6 řadami a 4 sloupci malých čtverečků. Chceš ji rozlámat na všech 24 jednotlivých dílků. Při jednom kroku smíš vzít pouze jeden kus a podél rýhy ho zlomit na dva kusy; nesmíš lámat několik kusů najednou ani je skládat na sebe.</p>
+<div class="question">Kolik nejméně zlomů potřebuješ? A můžeš počet zlomů snížit tím, že začneš velkými kusy místo malých?</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p><strong>Vždy přesně 23 zlomů.</strong> Ať zvolíš jakékoli pořadí, za daných pravidel se počet zlomů nedá zlepšit ani zhoršit.</p>
+<div class="step"><h4>1. Co se při zlomu mění?</h4><p>Na začátku máme jeden kus. Každý dovolený zlom rozdělí právě jeden existující kus na dva, a tak zvýší celkový počet kusů přesně o jedna. Po \(k\) zlomech je tedy počet kusů \(P=1+k\). Nemusíme sledovat tvary jednotlivých kusů.</p></div>
+<div class="step"><h4>2. Číselný příklad 6 × 4</h4><p>Požadovaný počet dílků:</p><div class="formula">\[N=6\cdot4=24.\]</div><p>Počáteční počet kusů je \(P_0=1\). Proto:</p><div class="formula">\[P_0+k=N,\qquad 1+k=24,\qquad \boxed{k=23}.\]</div><p>Kontrola: po 1 zlomu máme 2 kusy, po 5 zlomech 6 kusů a po 23 zlomech 24 kusů. Při dodržení pravidel nemůže žádný zlom vytvořit více než jeden nový kus.</p></div>
+<div class="step"><h4>3. Obecný vztah a invariant</h4><p>Pro tabulku s \(m\) řadami a \(n\) sloupci je \(N=mn\). Počet zlomů:</p><div class="formula">\[\boxed{k=mn-1}.\]</div><p>Po celou dobu platí invariant \(P-k=1\). Nezávisí na tom, kde čokoládu zlomíme.</p></div>
+<div class="wow">Překvapení: Neexistuje žádná rychlejší strategie. I kdybys začal největšími možnými kusy, na 24 samostatných čtverečků potřebuješ 23 zlomů.</div>
+<h3>Varianta: hra dvou hráčů</h3><p>Hráči se střídají v lámání, kdo provede poslední zlom, vyhrává. U tabulky 6 × 4 je 23 zlomů, tedy lichý počet tahů: při střídání vyhraje první hráč, bez ohledu na strategii. U tabulky 3 × 3 je \(3\cdot3-1=8\) zlomů, a vyhraje druhý hráč. Platí to za předpokladu, že se každý hráč vždy musí rozhodnout pro jeden dovolený zlom a nemůže vynechat tah.</p>
+<h3>Školní demonstrace</h3><p>Rozdej dvěma dvojicím čokoládu se stejným počtem dílků, nebo papírové obdélníky rozdělené mřížkou. Jedna dvojice začne dlouhými zlomy, druhá odlamuje malé části. Nech je zaznamenat počet kusů po každém kroku. Obě skupiny dojdou ke stejnému počtu zlomů. Zeptej se, jaké pravidlo by musely změnit, aby se výsledek změnil: například dovolit přelomení několika naskládaných kusů současně.</p>
+<div class="sources">Odborné zdroje: <a href="https://www.cut-the-knot.org/proofs/chocolad.shtml" target="_blank" rel="noopener">Cut-the-Knot – Breaking Chocolate Bars (důkaz invariantem a indukcí)</a>; <a href="https://www3.nd.edu/~dgalvin1/43900/43900_F13/Week10_games_sols.pdf" target="_blank" rel="noopener">University of Notre Dame – Problem Solving in Math, řešení hry s čokoládou</a>.</div>
+</div></details>
+</article>
