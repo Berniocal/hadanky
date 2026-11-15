@@ -1,6 +1,6 @@
 {
   "purpose": "Persistentní seznam již použitých nebo odeslaných hádanek, aby se neopakovaly ani tehdy, když zápis do index.html selže.",
-  "last_subject": "matematika",
+  "last_subject": "fyzika",
   "topics": [
     "problém 100 vězňů a krabic",
     "mravenec na natahující se gumě",
@@ -63,6 +63,7 @@
     "tři lineární polarizační filtry: vložení prostředního filtru pod úhlem 45° mezi dva zkřížené filtry obnoví průchod světla (ideálně 1/8 původní intenzity)",
     "Fitchův–Cheneyho trik s pěti kartami: pořadí čtyř odkrytých karet jednoznačně určí pátou skrytou kartu díky principu holubníku a šesti permutacím",
     "gyroskopická precese: rychle rotující vodorovné kolo podepřené na jednom konci osy se místo okamžitého pádu otáčí kolem svislé osy",
-    "lámání tabulky čokolády: při rozdělení m×n dílků po jednom zlomu vždy vznikne přesně mn−1 zlomů bez ohledu na pořadí"
+    "lámání tabulky čokolády: při rozdělení m×n dílků po jednom zlomu vždy vznikne přesně mn−1 zlomů bez ohledu na pořadí",
+    "rychlé adiabatické stlačení vzduchu: bez plamene může teplota plynu prudce vzrůst a ve speciálním ohňovém pístu zapálit troud"
   ]
 }
