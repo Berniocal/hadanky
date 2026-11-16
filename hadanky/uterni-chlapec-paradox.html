@@ -1,0 +1,34 @@
+<article class="card" data-slug="uterni-chlapec-paradox">
+<span class="tag">Matematika · pravděpodobnost, podmíněná pravděpodobnost, logika</span>
+<h2>👶 Záhada úterního chlapce</h2>
+<p class="lead">Z velkého souboru dvoudětných rodin vybereme náhodně jednu rodinu, ale ponecháme jen takové, ve kterých se <strong>alespoň jeden chlapec narodil v úterý</strong>. Pro úlohu předpokládej, že pohlaví dětí jsou nezávislá a stejně pravděpodobná, stejně jako sedm dnů narození. Nevybíráme náhodně jedno dítě, ale filtrujeme celé rodiny.</p>
+<div class="question">Jaká je pravděpodobnost, že ve vybrané rodině jsou oba sourozenci chlapci? Může na výsledku záležet, že známe den narození?</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p><strong>Pravděpodobnost je přesně \(\frac{13}{27}\approx48{,}15\,\%\).</strong> Úterý není příčinou změny; důležitý je způsob, jakým vybíráme rodiny. Jde o podmíněnou pravděpodobnost.</p>
+<div class="step"><h4>1. Spočítejme všechny stejně pravděpodobné možnosti</h4>
+<p>Jedno dítě může být chlapec nebo dívka a narodit se v kterémkoli ze sedmi dnů. Má tedy \(2\cdot7=14\) možných typů. Dvě rozlišené děti (starší a mladší) dávají \(14\cdot14=196\) stejně pravděpodobných kombinací.</p>
+<div class="formula">\[N_{\mathrm{vše}}=(2\cdot7)^2=196.\]</div>
+</div>
+<div class="step"><h4>2. Kolik rodin splní podmínku?</h4>
+<p>Je-li starší dítě chlapec narozený v úterý, mladší má 14 možností. Stejně tak existuje 14 možností s mladším úterním chlapcem. Případ, kdy jsou oba chlapci narození v úterý, jsme započítali dvakrát, proto ho jednou odečteme.</p>
+<div class="formula">\[N_{\mathrm{podmínka}}=14+14-1=27.\]</div>
+</div>
+<div class="step"><h4>3. Kolik z těchto rodin má dva chlapce?</h4>
+<p>Pokud je starší úterní chlapec, mladší může být chlapcem narozeným v jednom ze sedmi dnů: 7 možností. Totéž platí obráceně. Dvojici úterních chlapců opět odečteme jednou.</p>
+<div class="formula">\[N_{\mathrm{dva\ chlapci}}=7+7-1=13.\]</div>
+</div>
+<div class="step"><h4>4. Pravděpodobnost a její význam</h4>
+<p>Ze 27 stejně pravděpodobných rodin splňujících podmínku má 13 dva chlapce. Proto</p>
+<div class="formula">\[P(\mathrm{dva\ chlapci}\mid\mathrm{alespoň\ jeden\ úterní\ chlapec})=\frac{13}{27}\approx0{,}48148=\boxed{48{,}15\,\%}.\]</div>
+<p>Číselně to znamená přibližně 48 rodin se dvěma chlapci ze 100 rodin vybraných uvedeným filtrem.</p>
+</div>
+<h3>Proč je to překvapivé?</h3>
+<p>Kdybychom věděli pouze, že alespoň jedno dítě je chlapec, zůstaly by tři stejně pravděpodobné možnosti (chlapec–chlapec, chlapec–dívka, dívka–chlapec), tedy \(1/3\). Přidání úterý změní výběr rodin a posune výsledek téměř k \(1/2\).</p>
+<div class="wow">Pozor: kdybychom místo filtrování rodin vybrali v každé rodině náhodně jedno dítě a zjistili, že je to úterní chlapec, pravděpodobnost chlapce u druhého dítěte by byla \(1/2\). Bez přesného popisu výběru nemá hádanka jednoznačnou odpověď.</div>
+<h3>Varianta: chlapec narozený v konkrétním měsíci</h3>
+<p>Při 12 stejně pravděpodobných měsících místo sedmi dnů vyjde podle stejného počítání \((2\cdot12-1)/(4\cdot12-1)=23/47\approx48{,}94\,\%\). Model rovnoměrných měsíců je pouze matematické zjednodušení.</p>
+<h3>Školní demonstrace</h3>
+<p>Vytvoř tabulku \(14\times14\): řádky označ pohlavím a dnem narození staršího dítěte, sloupce mladšího. Vybarvi jeden řádek a jeden sloupec pro úterního chlapce. Žáci spočítají 27 vybarvených polí a mezi nimi 13 polí v oblasti dvou chlapců. Poté porovnejte s jednoduchou variantou bez dne narození.</p>
+<p class="sources"><strong>Zdroje:</strong> <a href="https://www.sciencenews.org/article/when-intuition-and-math-probably-look-wrong" target="_blank" rel="noopener noreferrer">Science News – When Intuition and Math Probably Look Wrong</a>; <a href="https://profkeithdevlin.org/devlins-angle/2010-posts/" target="_blank" rel="noopener noreferrer">Keith Devlin – Devlin's Angle (diskuse o přesném zadání)</a>.</p>
+</div></details>
+</article>
