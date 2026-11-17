@@ -1,0 +1,25 @@
+<article class="card" data-slug="zavod-plne-a-dute-koule">
+<span class="tag">Fyzika · mechanika, valení, moment setrvačnosti</span>
+<h2>🏁 Proč plná koule porazí dutou?</h2>
+<p class="lead">Na stejnou nakloněnou rovinu současně položíme dvě stejně velké koule: jednu homogenní plnou a druhou s hmotností soustředěnou do tenké kulové skořepiny. Obě se rozjedou z klidu a valí se bez prokluzování. Dutá koule může být dokonce těžší než plná.</p>
+<div class="question">Která dorazí do cíle dříve? Rozhoduje hmotnost, nebo to, kde je uvnitř koule rozložená?</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p><strong>Vyhraje homogenní plná koule.</strong> Za uvedených ideálních podmínek nezáleží na celkové hmotnosti ani na poloměru, ale na bezrozměrném poměru momentu setrvačnosti k \(mR^2\).</p>
+<h3>Proč?</h3>
+<p>Část ztracené polohové energie se mění na posuvnou kinetickou energii a část na rotační. Pro valení bez prokluzování platí \(\omega=v/R\). Zákon zachování energie proto dává:</p>
+<div class="formula">\[mgh=\frac12mv^2+\frac12I\omega^2=\frac12mv^2\left(1+\frac{I}{mR^2}\right).\]</div>
+<p>Pro homogenní plnou kouli \(I=\frac25mR^2\), pro ideální tenkou kulovou skořepinu \(I=\frac23mR^2\). Plná koule potřebuje při stejné rychlosti méně energie na rotaci, a proto získá větší posuvnou rychlost.</p>
+<div class="formula">\[a=\frac{g\sin\alpha}{1+I/(mR^2)},\qquad a_{\mathrm{plná}}=\frac57g\sin\alpha,\qquad a_{\mathrm{dutá}}=\frac35g\sin\alpha.\]</div>
+<h3>Úplný číselný příklad</h3>
+<p>Nechť je délka dráhy po nakloněné rovině \(s=2{,}00\,\mathrm m\), sklon \(\alpha=30^\circ\) a \(g=9{,}81\,\mathrm{m/s^2}\). Obě koule začínají z klidu. Předpokládáme dostatečné statické tření, aby neprokluzovaly, a zanedbáme odpor valení a vzduchu.</p>
+<div class="step"><h4>1. Složka tíhového zrychlení podél roviny</h4><div class="formula">\[g\sin30^\circ=9{,}81\cdot0{,}5=4{,}905\,\mathrm{m/s^2}.\]</div></div>
+<div class="step"><h4>2. Zrychlení obou koulí</h4><div class="formula">\[a_{\mathrm{plná}}=\frac57\cdot4{,}905\approx3{,}504\,\mathrm{m/s^2},\]</div><div class="formula">\[a_{\mathrm{dutá}}=\frac35\cdot4{,}905=2{,}943\,\mathrm{m/s^2}.\]</div><p>Hmotnost se vykrátila: i těžší ideální dutá koule má menší zrychlení.</p></div>
+<div class="step"><h4>3. Čas do cíle</h4><p>Pro rovnoměrně zrychlený pohyb z klidu platí \(s=\frac12at^2\), tedy \(t=\sqrt{2s/a}\).</p><div class="formula">\[t_{\mathrm{plná}}=\sqrt{\frac{4}{3{,}50357}}\approx1{,}069\,\mathrm s,\]</div><div class="formula">\[t_{\mathrm{dutá}}=\sqrt{\frac{4}{2{,}943}}\approx1{,}166\,\mathrm s.\]</div><p>Plná koule zvítězí přibližně o <strong>0,097 s</strong>. To je v tomto krátkém závodě měřitelný rozdíl.</p></div>
+<h3>Překvapivá varianta</h3>
+<p>Pokud místo duté koule použijeme tenký prstenec, má \(I=mR^2\), a proto \(a=\frac12g\sin\alpha\): bude ještě pomalejší. Naopak dvě homogenní plné koule různých hmotností a poloměrů dorazí za ideálních podmínek současně.</p>
+<div class="wow">Rozhodující není, kolik hmota váží, ale jak daleko od osy otáčení se nachází.</div>
+<h3>Školní demonstrace</h3>
+<p>Na širokou nakloněnou desku připrav dvě stejně velké koule s různým rozložením hmotnosti, případně demonstrační sadu těles pro valení. Spusť je současně z vyznačené čáry a výsledek natoč zpomaleným videem. Pro kontrolu použij dvě plné koule různých hmotností. Pozor: běžné míčky se mohou deformovat, klouzat nebo mít uvnitř složitou konstrukci, takže nejsou ideálními tenkými skořepinami.</p>
+<div class="sources">Odborný zdroj: <a href="https://openstax.org/books/university-physics-volume-1/pages/11-1-rolling-motion" target="_blank" rel="noopener noreferrer">OpenStax University Physics, 11.1 – Rolling Motion</a> (zákon zachování energie a zrychlení při valení bez prokluzování).</div>
+</div></details>
+</article>
