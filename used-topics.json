@@ -1,6 +1,6 @@
 {
   "purpose": "Persistentní seznam již použitých nebo odeslaných hádanek, aby se neopakovaly ani tehdy, když zápis do index.html selže.",
-  "last_subject": "fyzika",
+  "last_subject": "matematika",
   "topics": [
     "problém 100 vězňů a krabic",
     "mravenec na natahující se gumě",
@@ -66,6 +66,7 @@
     "lámání tabulky čokolády: při rozdělení m×n dílků po jednom zlomu vždy vznikne přesně mn−1 zlomů bez ohledu na pořadí",
     "rychlé adiabatické stlačení vzduchu: bez plamene může teplota plynu prudce vzrůst a ve speciálním ohňovém pístu zapálit troud",
     "paradox úterního chlapce: v náhodně vybrané dvoudětné rodině s alespoň jedním chlapcem narozeným v úterý je pravděpodobnost dvou chlapců 13/27",
-    "závod plné a duté koule na nakloněné rovině: při valení bez prokluzování rozhoduje rozložení hmotnosti a plná koule dorazí dříve nezávisle na celkové hmotnosti"
+    "závod plné a duté koule na nakloněné rovině: při valení bez prokluzování rozhoduje rozložení hmotnosti a plná koule dorazí dříve nezávisle na celkové hmotnosti",
+    "dva nerovnoměrně hořící provazy: přesné odměření 45 minut zapalováním jejich konců"
   ]
 }
