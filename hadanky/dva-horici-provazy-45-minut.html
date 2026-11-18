@@ -1,0 +1,29 @@
+<article class="card" data-slug="dva-horici-provazy-45-minut">
+<span class="tag">Matematika · logika, měření času a invariant</span>
+<h2>🔥 Dva provazy odměří 45 minut</h2>
+<p class="lead">Máš dva provazy a zapalovač, ale žádné hodiny. Každý provaz, zapálený na jednom konci, shoří přesně za 60 minut. Hoří však velmi nerovnoměrně: jedna polovina délky může shořet za 5 minut a druhá za 55 minut. Provazy nesmíš dělit ani měřit podle délky. Můžeš zapalovat jejich konce a poznáš okamžik, kdy některý dohoří.</p>
+<div class="question">Dokážeš pomocí obou provazů přesně odměřit 45 minut od okamžiku prvního zapálení?</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p><strong>Ano.</strong> Jeden provaz zapálíme současně z obou konců, druhý pouze z jednoho. Jakmile první dohoří, zapálíme druhý také z opačného konce.</p>
+<div class="step"><h4>1. Proč oba konce znamenají 30 minut?</h4>
+<p>Uvažujme ideální model: rychlost hoření v jednotlivých místech provazu je stálá v čase a nezávisí na směru, ale může se místo od místa lišit. Celý provaz představuje 60 minut hoření z jednoho konce. Dva plameny postupují proti sobě; každý za stejnou dobu spotřebuje stejný počet „minut hoření“, byť různé fyzické délky. Dohromady spotřebují 60 minut hoření, proto se setkají za \(60/2=30\) minut. Nezáleží na tom, kde se setkají.</p></div>
+<div class="step"><h4>2. Číselný postup krok za krokem</h4>
+<p><strong>Čas 0 minut:</strong> provaz A zapálíme z obou konců a provaz B z jednoho konce.</p>
+<div class="formula">\[t_A=\frac{60}{2}=30\ \mathrm{min}\]</div>
+<p><strong>Čas 30 minut:</strong> provaz A právě dohořel. Provaz B už hořel 30 minut, takže mu zůstává materiál odpovídající dalším 30 minutám hoření z jednoho konce:</p>
+<div class="formula">\[t_{B,\mathrm{zb}}=60-30=30\ \mathrm{min}.\]</div>
+<p>Teď zapálíme i druhý konec B. Dva plameny spotřebují zbývající materiál za polovinu této doby:</p>
+<div class="formula">\[\Delta t=\frac{30}{2}=15\ \mathrm{min}.\]</div>
+<p><strong>Celkový čas:</strong></p>
+<div class="formula">\[t=30+15=\boxed{45\ \mathrm{min}}.\]</div>
+<p>Výsledek znamená, že konec hoření druhého provazu je přesně 45 minut od prvního zapálení.</p></div>
+<h3>Proč je to překvapivé?</h3>
+<p>Polovina délky provazu vůbec nemusí odpovídat polovině času. Přesto zapálení z obou konců spolehlivě půlí dobu dohoření, protože rozhoduje celkové množství „minut hoření“, ne délka.</p>
+<h3>Varianta</h3>
+<p>Jediný takový provaz zapálený z obou konců poslouží jako třicetiminutové hodiny. U dvou provazů lze navíc vyznačit i přesný <strong>patnáctiminutový interval mezi 30. a 45. minutou</strong>. Nejde však o interval začínající v okamžiku prvního zapálení.</p>
+<h3>Školní demonstrace</h3>
+<p>Bez otevřeného ohně lze použít dva papírové pásky s různě širokými dílky označenými hodnotami v minutách: celkový součet na každém je 60. Dva žáci postupně odškrtávají z obou konců po jedné „minutě hoření“ za každý společný takt. Další žák odškrtává druhý pásek nejprve jen z jedné strany. Po 30 taktech přidá druhý směr; po dalších 15 taktech oba pásky zmizí. Rozdílné šířky políček ukazují, proč délka nerozhoduje.</p>
+<p class="note">Model předpokládá zanedbatelnou dobu zapalování, žádné samovolné zhasnutí a stejnou lokální rychlost šíření plamene bez ohledu na směr. U skutečných provazů by přesnost narušil vítr, přenos tepla i další vlivy.</p>
+<div class="sources">Zdroj: <a href="https://www.scientificamerican.com/game/math-puzzle-burn-ropes/" target="_blank" rel="noopener noreferrer">Scientific American – Math Puzzle: Burn the Ropes (28. 6. 2025)</a>.</div>
+</div></details>
+</article>
