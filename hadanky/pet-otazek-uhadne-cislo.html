@@ -1,0 +1,20 @@
+<article class="card" data-slug="pet-otazek-uhadne-cislo">
+<span class="tag">Matematika · dvojková soustava, logika, informace</span>
+<h2>🔢 Pět otázek uhodne číslo</h2>
+<p class="lead">Spolužák si tajně vybere celé číslo od 1 do 31. Neprozradí ho, ale smí odpovídat pouze „ano“ nebo „ne“. Ty máš právě pět otázek. Můžeš si je připravit předem a při hádání nepoužívat žádné další nápovědy.</p>
+<div class="question">Dokážeš jeho číslo vždy přesně určit? A proč by čtyři otázky nikdy nestačily?</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p><strong>Ano, pět předem připravených otázek stačí.</strong> Každé číslo od 1 do 31 má jednoznačný pětimístný dvojkový zápis. Každou otázkou zjistíme jednu z pěti binárních číslic (bitů).</p>
+<div class="step"><h4>1. Pět otázek</h4><p>Pro každou z vah <strong>1, 2, 4, 8 a 16</strong> se zeptej: „Obsahuje dvojkový zápis tvého čísla tuto váhu?“ Pro žáky bez znalosti dvojkové soustavy můžeš místo toho ukázat pět předem připravených kartiček a ptát se, zda na dané kartičce číslo leží. Na kartičce s vahou 1 jsou všechna lichá čísla; s vahou 2 jsou 2, 3, 6, 7, 10, 11, …; obdobně pro další váhy. Každé číslo patří právě na ty kartičky, jejichž váhy tvoří jeho součet.</p></div>
+<div class="step"><h4>2. Úplný číselný příklad: tajné číslo 23</h4><p>Odpovědi na otázky s vahami 1, 2, 4, 8 a 16 jsou postupně <strong>ano, ano, ano, ne, ano</strong>. Ano znamená přičíst danou váhu, ne znamená přičíst nulu.</p>
+<div class="formula">\[23=1+2+4+0+16=16+4+2+1.\]</div>
+<p>Proto má číslo 23 dvojkový zápis \(10111_2\). Dosazení zpět:</p>
+<div class="formula">\[1\cdot16+0\cdot8+1\cdot4+1\cdot2+1\cdot1=23.\]</div>
+<p>Každá z pěti odpovědí určuje jeden bit, takže jiné číslo nemůže mít stejnou pětici odpovědí.</p></div>
+<div class="step"><h4>3. Proč čtyři otázky nestačí?</h4><p>Jedna odpověď má dvě možnosti. Čtyři otázky mohou rozlišit nejvýše \(2^4=16\) různých posloupností odpovědí, ale tajných čísel je 31. Podle principu holubníku by alespoň dvě čísla musela vést ke stejným odpovědím. Pět otázek rozliší až \(2^5=32\) možností, což stačí.</p></div>
+<div class="wow">Překvapení: Pět jednoduchých ano/ne odpovědí nese dost informací k určení jednoho z 31 čísel. Stejná myšlenka stojí za binárním ukládáním informací v počítači.</div>
+<h3>Varianta</h3><p>Pro čísla 0 až 63 stačí šest otázek s vahami 1, 2, 4, 8, 16, 32. Obecně je pro \(N\) stejně možných čísel nutných nejméně \(\lceil\log_2N\rceil\) otázek ano/ne; vhodnými otázkami lze této meze dosáhnout.</p>
+<h3>Školní demonstrace</h3><p>Připrav pět kartiček pro váhy 1, 2, 4, 8 a 16. Na každou napiš čísla 1 až 31, která mají daný bit roven jedné. Jeden žák si vybere číslo a pouze ukáže, na kterých kartičkách se nachází. Ostatní sečtou čísla v záhlaví vybraných kartiček. Potom nechej žáky vysvětlit, proč to vždy funguje.</p>
+<p class="sources">Odborné zdroje: <a href="https://www.britannica.com/science/binary-number-system" target="_blank" rel="noopener">Encyclopaedia Britannica – Binary number system</a>; <a href="https://mathworld.wolfram.com/Binary.html" target="_blank" rel="noopener">Wolfram MathWorld – Binary</a>.</p>
+</div></details>
+</article>
