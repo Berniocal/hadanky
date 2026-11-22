@@ -1,0 +1,19 @@
+<article class="card" data-slug="kolik-nul-ma-sto-faktorial">
+<span class="tag">Matematika · dělitelnost, prvočísla, faktoriál</span>
+<h2>🔢 Kolik nul má číslo 100!?</h2>
+<p class="lead">Vynásobíme všechna přirozená čísla od 1 do 100: \(100!=1\cdot2\cdot3\cdots100\). Výsledek je obrovské celé číslo.</p>
+<div class="question">Kolika nulami přesně končí jeho desítkový zápis? Dokážeš to zjistit bez výpočtu celého součinu?</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p><strong>Číslo \(100!\) končí přesně 24 nulami.</strong> Koncová nula vzniká z faktoru 10, tedy z dvojice prvočísel \(2\cdot5\). Ve faktoriálu je faktorů 2 mnohem více než faktorů 5, a proto stačí spočítat všechny pětky v prvočíselném rozkladu.</p>
+<div class="step"><h4>1. První pětky</h4><p>Každý pátý činitel obsahuje alespoň jednu pětku. Takových čísel je \(\lfloor100/5\rfloor=20\). Samotných 20 nul by ale nebylo správně: čísla 25, 50, 75 a 100 obsahují po dvou faktorech 5.</p></div>
+<div class="step"><h4>2. Další pětky a úplný výpočet</h4><p>Za každé číslo dělitelné 25 přičteme ještě jednu pětku: \(\lfloor100/25\rfloor=4\). Žádný činitel do 100 není dělitelný \(125=5^3\), takže další pětky už nejsou.</p>
+<div class="formula">\[v_5(100!)=\left\lfloor\frac{100}{5}\right\rfloor+\left\lfloor\frac{100}{25}\right\rfloor+\left\lfloor\frac{100}{125}\right\rfloor=20+4+0=\boxed{24}.\]</div>
+<p>Symbol \(v_5\) znamená počet faktorů 5 v prvočíselném rozkladu. Protože faktorů 2 je dostatek, vznikne právě 24 dvojic \(2\cdot5\), a tedy 24 koncových nul.</p></div>
+<div class="step"><h4>3. Ověření na menším příkladu</h4><p>\(10!=3\,628\,800\) končí dvěma nulami. Ve členech 1 až 10 jsou právě dvě pětky: v číslech 5 a 10. Vzorec dává \(\lfloor10/5\rfloor=2\).</p></div>
+<h3>Varianta: kolik nul má \(1000!\)?</h3>
+<div class="formula">\[\left\lfloor\frac{1000}{5}\right\rfloor+\left\lfloor\frac{1000}{25}\right\rfloor+\left\lfloor\frac{1000}{125}\right\rfloor+\left\lfloor\frac{1000}{625}\right\rfloor=200+40+8+1=\boxed{249}.\]</div>
+<p class="wow">Překvapení: Není potřeba znát ani jedinou cifru obrovského čísla \(100!\). Stačí spočítat, kolikrát se v jeho součinu objeví prvočíslo 5. A pozor: číslo 25 přidává dvě pětky, nikoli jednu!</p>
+<h3>Školní demonstrace</h3><p>Nech žáky nejprve odhadnout počet nul u \(20!\), \(25!\), \(30!\) a \(100!\). Na tabuli vyznač násobky 5 a jinou barvou násobky 25. Právě skok mezi \(24!\) a \(25!\) ukáže, proč nestačí pouze počítat násobky pěti. Pro kontrolu lze použít kalkulačku s přesnými celými čísly nebo krátký program.</p>
+<p class="sources"><strong>Zdroje:</strong> <a href="https://mathworld.wolfram.com/Factorial.html" target="_blank" rel="noopener noreferrer">Wolfram MathWorld – Factorial</a>; <a href="https://en.wikipedia.org/wiki/Trailing_zero" target="_blank" rel="noopener noreferrer">Trailing zero – výpočet počtu koncových nul faktoriálu</a>.</p>
+</div></details>
+</article>
