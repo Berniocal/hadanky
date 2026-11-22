@@ -1,6 +1,6 @@
 {
   "purpose": "Persistentní seznam již použitých nebo odeslaných hádanek, aby se neopakovaly ani tehdy, když zápis do index.html selže.",
-  "last_subject": "fyzika",
+  "last_subject": "matematika",
   "topics": [
     "problém 100 vězňů a krabic",
     "mravenec na natahující se gumě",
@@ -70,6 +70,7 @@
     "dva nerovnoměrně hořící provazy: přesné odměření 45 minut zapalováním jejich konců",
     "fakírovo lože z hřebíků: při rovnoměrném rozložení stejné tíhy mezi mnoho hrotů klesá síla na jeden hrot a průměrný kontaktní tlak",
     "pět ano-ne otázek určí libovolné celé číslo od 1 do 31 pomocí binárního zápisu a vah 1, 2, 4, 8, 16",
-    "optické zneviditelnění borosilikátového skla v glycerinu: při téměř stejném indexu lomu zaniká lom a odraz na rozhraní"
+    "optické zneviditelnění borosilikátového skla v glycerinu: při téměř stejném indexu lomu zaniká lom a odraz na rozhraní",
+    "počet koncových nul faktoriálu 100!: počet faktorů 5 v součinu 1 až 100 určuje 24 nul"
   ]
 }
