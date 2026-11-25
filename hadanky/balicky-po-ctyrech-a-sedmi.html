@@ -1,0 +1,14 @@
+<article class="card" data-slug="balicky-po-ctyrech-a-sedmi">
+<span class="tag">Matematika · dělitelnost a kombinatorika</span>
+<h2>Balíčky po čtyřech a sedmi</h2>
+<p class="lead">Obchod prodává pastelky pouze v baleních po 4 a 7 kusech. Balení můžeš koupit libovolně mnoho, ale nesmíš je rozdělovat.</p>
+<div class="question">Jaký je největší počet pastelek, který nelze přesně koupit?</div>
+<details><summary>Zobrazit řešení</summary><div class="solution">
+<p><strong>17 pastelek.</strong> Hledáme nezáporná celá čísla \(a,b\), pro která \(4a+7b=N\).</p>
+<div class="step"><h4>Proč nejde 17?</h4><p>Počet sedmikusových balení může být jen 0, 1 nebo 2. Zbývá postupně \(17,\ 10,\ 3\) pastelek. Ani jedno číslo není dělitelné čtyřmi. Tři sedmikusová balení už obsahují 21 kusů.</p></div>
+<div class="step"><h4>Proč jde každý větší počet?</h4><div class="formula">\[18=4+7+7,\quad19=4+4+4+7,\]\[20=5\cdot4,\quad21=3\cdot7.\]</div><p>Máme čtyři po sobě jdoucí dosažitelná čísla. Přidáváním balení po čtyřech získáme všechna další čísla: například \(26=18+2\cdot4=26\), tedy tři balení po čtyřech a dvě po sedmi. Každé celé číslo alespoň 18 má jeden ze čtyř zbytků po dělení čtyřmi.</p></div>
+<p>Obecně pro nesoudělná celá čísla \(a,b>1\) je největší nedosažitelný počet \(ab-a-b\). Zde \(4\cdot7-4-7=17\). Pro balení po 5 a 8 je výsledek 27. Pro balení po 4 a 6 největší nedosažitelné číslo neexistuje, protože žádný lichý počet není dosažitelný.</p>
+<div class="wow">Překvapení: od určité hranice už není jediná mezera.</div>
+<p>Demonstrace: žáci skládají počty z kartiček hodnot 4 a 7 a hledají čtyři po sobě jdoucí výsledky.</p>
+<p>Zdroje: <a href="https://mathworld.wolfram.com/CoinProblem.html">Wolfram MathWorld – Coin Problem</a>.</p>
+</div></details></article>
