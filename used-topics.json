@@ -1,6 +1,6 @@
 {
   "purpose": "Persistentní seznam již použitých nebo odeslaných hádanek, aby se neopakovaly ani tehdy, když zápis do index.html selže.",
-  "last_subject": "matematika",
+  "last_subject": "fyzika",
   "topics": [
     "problém 100 vězňů a krabic",
     "mravenec na natahující se gumě",
@@ -73,6 +73,7 @@
     "optické zneviditelnění borosilikátového skla v glycerinu: při téměř stejném indexu lomu zaniká lom a odraz na rozhraní",
     "počet koncových nul faktoriálu 100!: počet faktorů 5 v součinu 1 až 100 určuje 24 nul",
     "infračervené světlo televizního ovladače: pro lidské oko neviditelné záření kolem 940 nm může být viditelné na některých digitálních kamerách",
-    "Frobeniův problém pro balení po 4 a 7 kusech: největší nedosažitelný počet je 17"
+    "Frobeniův problém pro balení po 4 a 7 kusech: největší nedosažitelný počet je 17",
+    "hmotnost nabité baterie: uložená vnitřní energie zvyšuje klidovou hmotnost o E/c²"
   ]
 }
